@@ -450,7 +450,7 @@
               </div>
             </div>
             <div class="overflow-hidden border-y-[1px] border-neutral-300" x-data="{ isOpen: false }">
-              <button class="flex w-full  items-center justify-between gap-2 p-4 text-white transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Показать</span><span class="transition" :class="{ '-rotate-180': isOpen }">
+              <button class="flex w-full items-center justify-between gap-2 p-4 text-neutral-900  transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Показать</span><span class="transition" :class="{ '-rotate-180': isOpen }">
                   <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                   </svg></span></button>
@@ -493,7 +493,7 @@
                 <p class="text-center">74 лотов по 165 € всего.</p>
                 <p class="text-center">25 лотов с фото видео обзором.</p>
               </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-1 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
+              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
                 <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
                 <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
                   <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -517,8 +517,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -594,8 +594,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -671,8 +671,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -754,7 +754,7 @@
                 <p class="text-center">25 лотов по 155 € всего.</p>
                 <p class="text-center">10 лотов с фото видео обзором.</p>
               </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-1 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
+              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
                 <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
                 <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
                   <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -778,8 +778,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -855,8 +855,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -932,8 +932,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -1015,7 +1015,7 @@
                 <p class="text-center">74 лотов по 155 € всего.</p>
                 <p class="text-center">40 лотов с фото видео обзором.</p>
               </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-1 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
+              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
                 <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
                 <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
                   <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -1039,8 +1039,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -1116,8 +1116,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
@@ -1193,8 +1193,8 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <iframe>(width="300" height="200" src="https://www.youtube.com/embed/a3ICNMQW7Ok?enablejsapi=1&rel=0" frameborder="0" allowfullscreen)</iframe>
+                      <div class="swiper-slide" id="youtube-slide">
+                        <div id="player"></div>
                       </div>
                     </div>
                     <div class="slide-pagination text-center"></div>
