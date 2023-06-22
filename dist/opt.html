@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://seconom24.ru/published/SC/html/scripts/css/font-awesome.min.css?11.5.3s">
-  <script defer src="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.js"></script><script defer src="opt.js"></script><link href="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.css" rel="stylesheet"><link href="src_scss_opt_scss.css" rel="stylesheet"></head>
+  <script defer src="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.js"></script><script defer src="opt.js"></script><link href="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.css" rel="stylesheet"><link href="opt.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base">
     <nav class="w-full top-0 py-1" id="header">
       <div class="w-full  mx-auto flex flex-wrap items-center justify-between mt-0 px-5 py-3">
@@ -478,9 +478,9 @@
     <div class="px-5 py-4">
       <table class="min-w-full">
         <tbody class="odd:bg-gray-50" x-data="{isOpen: false}" :id="$id('tbody')">
-          <tr class="border-y-[1px] border-gray-200" :class="{active:isOpen===true}">
+          <tr class="border-y-[1px] border-gray-400" :class="{active:isOpen===true}">
             <td class="w-3/5">
-              <p class="font-medium">Микс женский Heine W</p>
+              <p class="font-semibold">Микс женский Heine W</p>
               <p class="font-medium">Качество: Сток</p>
               <p class="font-medium">Страна: Германия</p>
               <p class="font-medium">Сезон: Зима</p>
@@ -489,11 +489,11 @@
               <p class="font-medium">1435 ₽/кг</p>
             </td>
             <td class="w-2/5">
-              <div class="border border-primary-600 rounded text-primary-600 bg-transparent">
+              <div class="border border-primary-600 rounded text-white bg-primary-600">
                 <p class="text-center">74 лотов по 165 € всего.</p>
                 <p class="text-center">25 лотов с фото видео обзором.</p>
               </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
+              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full uppercase" x-on:click="isOpen = !isOpen" type="button">
                 <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
                 <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
                   <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -504,7 +504,7 @@
           </tr>
           <tr x-cloak x-show="isOpen">
             <td class="w-full bg-white" colspan="2">
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -517,7 +517,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -581,7 +581,7 @@
                   </section>
                 </div>
               </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -594,7 +594,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -658,7 +658,7 @@
                   </section>
                 </div>
               </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -671,7 +671,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -739,9 +739,9 @@
           </tr>
         </tbody>
         <tbody class="odd:bg-gray-50" x-data="{isOpen: false}" :id="$id('tbody')">
-          <tr class="border-y-[1px] border-gray-200" :class="{active:isOpen===true}">
+          <tr class="border-y-[1px] border-gray-400" :class="{active:isOpen===true}">
             <td class="w-3/5">
-              <p class="font-medium">Микс мужской Heine W</p>
+              <p class="font-semibold">Микс мужской Heine W</p>
               <p class="font-medium">Качество: Сток</p>
               <p class="font-medium">Страна: Франция</p>
               <p class="font-medium">Сезон: Лето</p>
@@ -750,11 +750,11 @@
               <p class="font-medium">1650 ₽/кг</p>
             </td>
             <td class="w-2/5">
-              <div class="border border-primary-600 rounded text-primary-600 bg-transparent">
+              <div class="border border-primary-600 rounded text-white bg-primary-600">
                 <p class="text-center">25 лотов по 155 € всего.</p>
                 <p class="text-center">10 лотов с фото видео обзором.</p>
               </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
+              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full uppercase" x-on:click="isOpen = !isOpen" type="button">
                 <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
                 <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
                   <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -765,7 +765,7 @@
           </tr>
           <tr x-cloak x-show="isOpen">
             <td class="w-full bg-white" colspan="2">
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -778,7 +778,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -842,7 +842,7 @@
                   </section>
                 </div>
               </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -855,7 +855,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -919,7 +919,7 @@
                   </section>
                 </div>
               </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -932,7 +932,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -1000,9 +1000,9 @@
           </tr>
         </tbody>
         <tbody class="odd:bg-gray-50" x-data="{isOpen: false}" :id="$id('tbody')">
-          <tr class="border-y-[1px] border-gray-200" :class="{active:isOpen===true}">
+          <tr class="border-y-[1px] border-gray-400" :class="{active:isOpen===true}">
             <td class="w-3/5">
-              <p class="font-medium">Микс детский Heine W</p>
+              <p class="font-semibold">Микс детский Heine W</p>
               <p class="font-medium">Качество: Сток</p>
               <p class="font-medium">Страна: Франция</p>
               <p class="font-medium">Сезон: Весна</p>
@@ -1011,11 +1011,11 @@
               <p class="font-medium">1435 ₽/кг</p>
             </td>
             <td class="w-2/5">
-              <div class="border border-primary-600 rounded text-primary-600 bg-transparent">
+              <div class="border border-primary-600 rounded text-white bg-primary-600">
                 <p class="text-center">74 лотов по 155 € всего.</p>
                 <p class="text-center">40 лотов с фото видео обзором.</p>
               </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
+              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full uppercase" x-on:click="isOpen = !isOpen" type="button">
                 <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
                 <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
                   <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -1026,7 +1026,7 @@
           </tr>
           <tr x-cloak x-show="isOpen">
             <td class="w-full bg-white" colspan="2">
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -1039,7 +1039,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -1103,7 +1103,7 @@
                   </section>
                 </div>
               </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -1116,7 +1116,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>
@@ -1180,7 +1180,7 @@
                   </section>
                 </div>
               </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
+              <div class="outline outline-offset-0 outline-green-400 rounded mb-2 first:mt-2">
                 <div class="swiper-block w-[86vw] m-auto">
                   <div class="swiper">
                     <div class="swiper-wrapper items-center min-h-525">
@@ -1193,7 +1193,7 @@
                       <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
                         <div class="swiper-lazy-preloader"></div>
                       </div>
-                      <div class="swiper-slide" id="youtube-slide">
+                      <div class="swiper-slide youtube-slide">
                         <div id="player"></div>
                       </div>
                     </div>

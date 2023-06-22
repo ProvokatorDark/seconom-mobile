@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://seconom24.ru/published/SC/html/scripts/css/font-awesome.min.css?11.5.3s">
-  <script defer src="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.js"></script><script defer src="index.js"></script><link href="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.css" rel="stylesheet"><link href="src_scss_opt_scss.css" rel="stylesheet"></head>
+  <script defer src="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.js"></script><script defer src="vendors-node_modules_jquery_dist_jquery_js.js"></script><script defer src="index.js"></script><link href="vendors-node_modules_swiper_swiper-bundle_min_css-node_modules_swiper_swiper-bundle_esm_js.css" rel="stylesheet"><link href="src_scss_card_scss.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base">
     <nav class="w-full top-0 py-1" id="header">
       <div class="w-full  mx-auto flex flex-wrap items-center justify-between mt-0 px-5 py-3">
@@ -333,935 +333,1310 @@
     <div class="flex items-center">
       <nav class="bg-white px-5 py-3 w-full">
         <ol class="list-reset flex">
-          <li><a class="text-primary-600" href="#">Оптом</a><span class="text-gray-500 mx-2">/</span>
+          <li><a class="text-primary-600" href="#">Женские</a><span class="text-gray-500 mx-2">/</span>
           </li>
-          <li><a class="text-gray-500" href="#">Сток Миксы</a>
+          <li><a class="text-primary-600" href="#">Блузки</a><span class="text-gray-500 mx-2">/</span>
+          </li>
+          <li><a class="text-gray-500" href="#">Data</a>
           </li>
         </ol>
-      </nav>
+      </nav><span>
+        <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+        </svg></span>
     </div>
-    <div class="mx-5 my-2 py-1 px-3 text-right border-2 border-primary-400 font-medium text-base">Курс ЕВРО на 19.05.2023<span class="block text-xl font-semibold text-primary-600">87.49 ₽</span></div>
-    <h1 class="px-5 py-3 text-xl font-medium">Сток Миксы Оптом</h1>
-    <div class="px-5 py-3 w-full">
-      <div x-data="{show:false}">
-        <button class="block transition ring-2 ring-offset-2 ring-primary-600 py-2 w-full bg-primary-600 flex text-lg leading-4 font-normal text-white justify-center items-center" x-on:click="show=!show">
-          <svg class="mr-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12C7.10457 12 8 11.1046 8 10C8 8.89543 7.10457 8 6 8C4.89543 8 4 8.89543 4 10C4 11.1046 4.89543 12 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M6 4V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M6 12V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M12 18C13.1046 18 14 17.1046 14 16C14 14.8954 13.1046 14 12 14C10.8954 14 10 14.8954 10 16C10 17.1046 10.8954 18 12 18Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M12 4V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M12 18V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M18 9C19.1046 9 20 8.10457 20 7C20 5.89543 19.1046 5 18 5C16.8954 5 16 5.89543 16 7C16 8.10457 16.8954 9 18 9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M18 4V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M18 9V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg><span>Фильтр товаров</span>
-        </button>
-        <div class="fixed w-full h-screen overflow-y-auto overscroll-contain top-0 left-0 bg-white z-40" x-show="show">
-          <form x-data="" @submit.prevent="submitForm">
-            <div class="my-5 h-6">
-              <button class="close close-menu absolute top-5 right-5" x-on:click="show=!show" type="button" aria-label="Close"><span class="fa fa-times text-xl" aria-hidden="true"></span></button>
-            </div>
-            <div class="overflow-hidden border-t-[1px] border-neutral-300" x-data="{ isOpen: false }">
-              <button class="flex w-full  items-center justify-between gap-2 p-4 text-neutral-900 transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Категории</span><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span></button>
-              <div class="border-t border-neutral-200 bg-white" x-cloak x-show="isOpen" x-data="{items:['Сток Миксы','Миксы Секонд-Хенд','Женские сортировки','Мужские сортировки','Смешанные сортировки','Детские сортировки','Сумки','Обувь','Домашний обиход и текстиль','Оригинал','Ветошь',]}">
-                <ul class="space-y-1 border-t border-neutral-200 p-4">
-                  <template x-for="(item,index) in items" :key="index">
-                    <li x-id="['filter-category']">
-                      <label class="inline-flex items-center gap-2" :for="$id('filter-category')">
-                        <input class="h-6 w-6 rounded border-neutral-300" type="checkbox" :id="$id('filter-category')"><span class="text-lg font-medium text-neutral-700" x-text="item"></span>
-                      </label>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-            </div>
-            <div class="overflow-hidden border-t-[1px] border-neutral-300" x-data="{ isOpen: false }">
-              <button class="flex w-full  items-center justify-between gap-2 p-4 text-neutral-900 transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Страна</span><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span></button>
-              <div class="border-t border-neutral-200 bg-white" x-cloak x-show="isOpen" x-data="{items:['Англия','Германия','Голландия','Европа','Швеция','Шотландия']}">
-                <ul class="space-y-1 p-4 grid grid-cols-2">
-                  <template x-for="(item,index) in items" :key="index">
-                    <li x-id="['filter-size-ru']">
-                      <label class="inline-flex items-center gap-2" :for="$id('filter-size-ru')">
-                        <input class="h-6 w-6 rounded border-neutral-300" type="checkbox" :id="$id('filter-size-ru')"><span class="text-lg font-medium text-neutral-700" x-text="item"></span>
-                      </label>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-            </div>
-            <div class="overflow-hidden border-t-[1px] border-neutral-300" x-data="{ isOpen: false }">
-              <button class="flex w-full  items-center justify-between gap-2 p-4 text-neutral-900 transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Качество</span><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span></button>
-              <div class="border-t border-neutral-200 bg-white" x-cloak x-show="isOpen" x-data="{items:['1 Сорт','Cream','Extra','Extra+Cream','Ветошь','Очищенный оригинал','Сток']}">
-                <ul class="space-y-1 p-4 grid grid-cols-1">
-                  <template x-for="(item,index) in items" :key="index">
-                    <li x-id="['filter-size-eu']">
-                      <label class="inline-flex items-center gap-2" :for="$id('filter-size-eu')">
-                        <input class="h-6 w-6 rounded border-neutral-300" type="checkbox" :id="$id('filter-size-eu')"><span class="text-lg font-medium text-neutral-700" x-text="item"></span>
-                      </label>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-            </div>
-            <div class="overflow-hidden border-t-[1px] border-neutral-300" x-data="{ isOpen: false }">
-              <button class="flex w-full  items-center justify-between gap-2 p-4 text-neutral-900 transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Цена</span><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span></button>
-              <div class="border-t border-neutral-200 bg-white" x-cloak x-show="isOpen">
-                <div class="space-y-1 pl-4 pt-4 text-lg font-medium text-neutral-700"><span>Диапазон цены:</span></div>
-                <div class="p-4">
-                  <div class="flex justify-between gap-4">
-                    <label class="flex items-center gap-2" for="FilterPriceFrom"><span class="text-lg text-neutral-600">От</span>
-                      <input class="w-full rounded-md border-neutral-200 shadow-sm sm:text-lg" type="number" id="FilterPriceFrom" placeholder="От">
-                    </label>
-                    <label class="flex items-center gap-2" for="FilterPriceTo"><span class="text-lg text-neutral-600">До</span>
-                      <input class="w-full rounded-md border-neutral-200 shadow-sm sm:text-lg" type="number" id="FilterPriceTo" placeholder="До">
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="overflow-hidden border-t-[1px] border-neutral-300" x-data="{ isOpen: false }">
-              <button class="flex w-full  items-center justify-between gap-2 p-4 text-neutral-900 transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Сезон</span><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span></button>
-              <div class="border-t border-neutral-200 bg-white" x-cloak x-show="isOpen" x-data="{items:['Демисезон', 'Зима', 'Круглогодичный', 'Лето']}">
-                <ul class="space-y-1 border-t border-neutral-200 p-4">
-                  <template x-for="(item,index) in items" :key="index">
-                    <li x-id="['filter-state']">
-                      <label class="inline-flex items-center gap-2" :for="$id('filter-state')">
-                        <input class="h-6 w-6 rounded border-neutral-300" type="checkbox" :id="$id('filter-state')"><span class="text-lg font-medium text-neutral-700" x-text="item"></span>
-                      </label>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-            </div>
-            <div class="overflow-hidden border-y-[1px] border-neutral-300" x-data="{ isOpen: false }">
-              <button class="flex w-full items-center justify-between gap-2 p-4 text-neutral-900  transition" x-on:click="isOpen = !isOpen" type="button"><span class="text-lg font-medium">Показать</span><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span></button>
-              <div class="border-t border-neutral-200 bg-white" x-cloak x-show="isOpen" x-data="{items:['С фотообзором', 'С видеообзором', 'В наличии', 'Новинки','Распродажа']}">
-                <ul class="space-y-1 border-t border-neutral-200 p-4">
-                  <template x-for="(item,index) in items" :key="index">
-                    <li x-id="['filter-state']">
-                      <label class="inline-flex items-center gap-2" :for="$id('filter-state')">
-                        <input class="h-6 w-6 rounded border-neutral-300" type="checkbox" :id="$id('filter-state')"><span class="text-lg font-medium text-neutral-700" x-text="item"></span>
-                      </label>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-            </div>
-            <div class="px-5 pt-6 pb-12 w-full">
-              <button class="py-2 w-full bg-primary-600 text-lg font-normal text-secondary  uppercase  rounded">Применить</button>
-              <button class="py-2 mt-3 w-full bg-secondary text-lg font-normal text-primary-600  uppercase border border-primary-600 rounded">Сбросить</button>
-              <button class="py-2 mt-3 w-full bg-accent-600 text-lg font-normal text-secondary  uppercase border border-accent-600 rounded">Сохранить поиск</button>
-            </div>
-          </form>
+    <div class="swiper">
+      <div class="swiper-wrapper items-center min-h-525">
+        <div class="swiper-slide"><span class="text-lg red-icon">-40%</span><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg"/>
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+        <div class="swiper-slide"><span class="text-lg blue-icon">Post</span><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg"/>
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+        <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg"/>
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+        <div class="swiper-slide"><span class="text-lg blue-icon">New</span><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/21/a9cc63e4-df31-11ed-a279-107b444a83b2_1_enl.jpg"/>
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+        <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/21/a9cc63e4-df31-11ed-a279-107b444a83b2_2_enl.jpg"/>
+          <div class="swiper-lazy-preloader"></div>
         </div>
       </div>
+      <div class="slide-pagination text-center"></div>
+    </div>
+    <div class="card-info pt-3">
+      <div class="px-5 pb-5">
+        <div class="price-block">
+          <p class="text-2xl font-medium text-green-600 pt-2">319 ₽<span class="line-through text-lg text-gray-600 ml-1"> 399 ₽</span></p>
+        </div>
+        <div class="card-name text-xl font-medium">
+          <h1> Шорты FOREVER 21 1086-L3832290R</h1>
+        </div>
+      </div>
+      <div class="px-5 py-2 bg-gray-100">
+        <div class="flex flex-row">
+          <p class="mr-2 font-medium">Размер:</p>
+          <ul class="flex flex-row gap-x-3">
+            <li>
+              <div class="grid grid-cols-1 border-2 rounded-md border-gray-500 text-center px-3 text-xs"><span class="text-gray-500 font-bold">52</span><span class="text-gray-500 font-bold">RU</span></div>
+            </li>
+            <li>
+              <div class="grid grid-cols-1 border-2 rounded-md border-gray-500 text-center px-3 text-xs"><span class="text-gray-500 font-bold">XL</span><span class="text-gray-500 font-bold">USA</span></div>
+            </li>
+            <li>
+              <div class="grid grid-cols-1 border-2 rounded-md border-gray-500 text-center px-3 text-xs"><span class="text-gray-500 font-bold">XM</span><span class="text-gray-500 font-bold">EU</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="py-2">
+          <p class="font-medium">Цвет:<span class="font-normal ml-1">Белый</span></p>
+          <p class="font-medium">Материал:<span class="font-normal ml-1">Сатин</span></p>
+          <p class="font-medium">Состояние:<span class="font-normal ml-1">Хорошее</span></p>
+        </div>
+      </div>
+      <div class="flex px-5 flex-col"><a class="text-primary-600 font-medium mt-4 uppercase" href="#">Таблица размеров</a></div>
+      <div class="px-5 py-2">
+        <div class="mt-4 bg-gray-100 text-gray-800 text-center pb-2 uppercase font-medium">Время резервирования товара</div>
+        <div class="flex flex-wrap justify-center gap-4 bg-gray-100 pb-3" x-data="timer()" x-init="countdown()">
+          <div class="timer-circle">
+            <div><span class="timer-count" x-text="minutes"></span><span class="timer-type">Минут</span></div>
+          </div>
+          <div class="timer-circle">
+            <div><span class="timer-count" x-text="seconds"></span><span class="timer-type">Секунд</span></div>
+          </div>
+        </div>
+      </div>
+      <section class="mt-4 px-5 w-full flex flex-cols-2 gap-2">
+        <div class="w-full">
+          <div class="flex rounded border-primary-600 border">
+            <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
+            <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
+              <div class="w-4 h-5 ">
+                <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="flex rounded border-b-2 border overflow-hidden">
+            <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
+            <div class="bg-primary-500 p-3 hidden ns:block">
+              <div class="w-6 h-5">
+                <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                  <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="flex px-5 flex-col"><a class="text-primary-600 font-medium mt-4 uppercase" href="#">Все товары FOREVER</a></div>
+      <div class="flex px-5 flex-col"><a class="text-primary-600 font-medium mt-4 uppercase" href="#">Все шорты FOREVER</a></div>
     </div>
     <div class="px-5 py-4">
       <table class="min-w-full">
-        <tbody class="odd:bg-gray-50" x-data="{isOpen: false}" :id="$id('tbody')">
-          <tr class="border-y-[1px] border-gray-200" :class="{active:isOpen===true}">
-            <td class="w-3/5">
-              <p class="font-medium">Микс женский Heine W</p>
-              <p class="font-medium">Качество: Сток</p>
-              <p class="font-medium">Страна: Германия</p>
-              <p class="font-medium">Сезон: Зима</p>
-              <p class="font-medium">Упаковка: 14 кг</p>
-              <p class="font-medium">16.5 €/кг</p>
-              <p class="font-medium">1435 ₽/кг</p>
-            </td>
-            <td class="w-2/5">
-              <div class="border border-primary-600 rounded text-primary-600 bg-transparent">
-                <p class="text-center">74 лотов по 165 € всего.</p>
-                <p class="text-center">25 лотов с фото видео обзором.</p>
-              </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
-                <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
-                <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span>
-              </button>
-            </td>
-          </tr>
-          <tr x-cloak x-show="isOpen">
-            <td class="w-full bg-white" colspan="2">
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 1</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>14.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>120 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>100 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>12000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 2</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>14.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>120 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>100 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>12000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 3</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>10.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>115 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>110 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>14000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-        <tbody class="odd:bg-gray-50" x-data="{isOpen: false}" :id="$id('tbody')">
-          <tr class="border-y-[1px] border-gray-200" :class="{active:isOpen===true}">
-            <td class="w-3/5">
-              <p class="font-medium">Микс мужской Heine W</p>
-              <p class="font-medium">Качество: Сток</p>
-              <p class="font-medium">Страна: Франция</p>
-              <p class="font-medium">Сезон: Лето</p>
-              <p class="font-medium">Упаковка: 14 кг</p>
-              <p class="font-medium">20 €/кг</p>
-              <p class="font-medium">1650 ₽/кг</p>
-            </td>
-            <td class="w-2/5">
-              <div class="border border-primary-600 rounded text-primary-600 bg-transparent">
-                <p class="text-center">25 лотов по 155 € всего.</p>
-                <p class="text-center">10 лотов с фото видео обзором.</p>
-              </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
-                <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
-                <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span>
-              </button>
-            </td>
-          </tr>
-          <tr x-cloak x-show="isOpen">
-            <td class="w-full bg-white" colspan="2">
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 1</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>14.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>120 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>100 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>12000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 2</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>14.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>120 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>100 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>12000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 3</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>10.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>115 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>110 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>14000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-        <tbody class="odd:bg-gray-50" x-data="{isOpen: false}" :id="$id('tbody')">
-          <tr class="border-y-[1px] border-gray-200" :class="{active:isOpen===true}">
-            <td class="w-3/5">
-              <p class="font-medium">Микс детский Heine W</p>
-              <p class="font-medium">Качество: Сток</p>
-              <p class="font-medium">Страна: Франция</p>
-              <p class="font-medium">Сезон: Весна</p>
-              <p class="font-medium">Упаковка: 14 кг</p>
-              <p class="font-medium">16.5 €/кг</p>
-              <p class="font-medium">1435 ₽/кг</p>
-            </td>
-            <td class="w-2/5">
-              <div class="border border-primary-600 rounded text-primary-600 bg-transparent">
-                <p class="text-center">74 лотов по 155 € всего.</p>
-                <p class="text-center">40 лотов с фото видео обзором.</p>
-              </div>
-              <button class="flex items-center justify-between gap-2 text-primary-600 bg-transparent font-semibold py-1 mt-2 px-4 border border-primary-600 rounded w-full" x-on:click="isOpen = !isOpen" type="button">
-                <template class="flex items-center justify-between gap-2" x-if="isOpen"><span>Скрыть</span></template>
-                <template x-if="!isOpen"><span>Показать</span></template><span class="transition" :class="{ '-rotate-180': isOpen }">
-                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                  </svg></span>
-              </button>
-            </td>
-          </tr>
-          <tr x-cloak x-show="isOpen">
-            <td class="w-full bg-white" colspan="2">
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 1</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>14.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>120 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>100 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>12000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 2</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>14.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>120 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>100 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>12000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="border-2 border-primary-400 rounded mb-1 first:mt-1">
-                <div class="swiper-block w-[86vw] m-auto">
-                  <div class="swiper">
-                    <div class="swiper-wrapper items-center min-h-525">
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_1_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_2_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide"><img class="w-full" loading="lazy" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2022/09/07/2b0d78f9-2910-11ed-a262-107b444a83b2_3_enl.jpg">
-                        <div class="swiper-lazy-preloader"></div>
-                      </div>
-                      <div class="swiper-slide" id="youtube-slide">
-                        <div id="player"></div>
-                      </div>
-                    </div>
-                    <div class="slide-pagination text-center"></div>
-                  </div>
-                </div>
-                <div class="flex justify-between">
-                  <h4 class="text-xl">Лот 3</h4><span>
-                    <svg class="w-6 h-6 fill-current text-red-500 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
-                    </svg></span>
-                </div>
-                <table class="min-w-full mb-4">
-                  <tbody>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Вес лота:</td>
-                      <td>10.8 кг.</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Количество вещей в лоте:</td>
-                      <td>115 штук</td>
-                    </tr>
-                    <tr class="bg-gray-100">
-                      <td class="font-medium">Себестоимость одной вещи:</td>
-                      <td>110 ₽</td>
-                    </tr>
-                    <tr>
-                      <td class="font-medium">Цена лота в рублях:</td>
-                      <td>14000 ₽</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="item-bottom pt-2 pb-2">
-                  <section class="mt-4 px-1 w-full flex flex-cols-2 gap-2">
-                    <div class="w-full">
-                      <div class="flex rounded border-primary-600 border">
-                        <button class="w-full block text-primary-600 bg-secondary-600 text-sm py-3 px-1 font-sans uppercase font-bold border-primary-600 border-r-[1px] text-sm ">Подписаться</button>
-                        <div class="bg-gray-50 p-3 border-primary-600 border-l-1 hidden ns:block">
-                          <div class="w-4 h-5 ">
-                            <svg class="text-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                              <path fill="currentColor" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2ZM8 2a3 3 0 0 1 3 3c0 1.702.561 3.35 1.086 4.531A16.248 16.248 0 0 0 12.83 11H3.17a16.254 16.254 0 0 0 .744-1.469C4.439 8.351 5 6.701 5 5a3 3 0 0 1 3-3Zm6.556 7.988a14.277 14.277 0 0 1-.642-1.27C13.439 7.65 13 6.299 13 5A5 5 0 1 0 3 5c0 1.298-.439 2.65-.914 3.719-.233.526-.467.964-.642 1.27-.18.314-.444.63-.444 1.011v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1c0-.38-.264-.697-.444-1.012Z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <div class="flex rounded border-b-2 border overflow-hidden">
-                        <button class="w-full block text-white text-sm bg-primary-600 text-sm py-3 px-1 font-sans uppercase font-bold text-sm" disabled>В корзину</button>
-                        <div class="bg-primary-500 p-3 hidden ns:block">
-                          <div class="w-6 h-5">
-                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
-                              <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                              <circle cx="17.5" cy="18.5" r="1.5"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
+        <tr class="bg-gray-100">
+          <td class="font-medium">Вес:</td>
+          <td>0.096 кг.</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Материал:</td>
+          <td>Хлопок 100</td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td class="font-medium">Обхват груди:</td>
+          <td>72</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Длина по спине:</td>
+          <td>64</td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td class="font-medium">Сезон:</td>
+          <td>Лето</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Состав:</td>
+          <td>Хлопок</td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td class="font-medium">Размер на ярлыке:</td>
+          <td>UK12</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Склад:</td>
+          <td>Екатеринбург</td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td class="font-medium">Визуальный осмотр:</td>
+          <td>Есть мелкие катышки</td>
+        </tr>
       </table>
     </div>
+    <div class="flex flex-col items-center mt-5 mb-10">
+      <div class="flex flex-row font-medium mb-3">Мы в социальных сетях</div>
+      <div class="flex flex-row w-52 justify-around"><a class="w-10 h-10 soc-ic-vk" href="//vk.com/shopsecond24" target="_blank"></a><a class="w-10 h-10 soc-ic-ok" href="//ok.ru/seconom24" target="_blank"></a><a class="w-10 h-10 soc-ic-telegram" href="//t.me/seconom_24" target="_blank"></a></div>
+    </div>
+    <div class="mx-5 py-4 border-y-[1px] border-gray-400">
+      <div class="relative swiper-object">
+        <div class="swiper-navigation mb-6" data-swiper-id="1">
+          <button class="swiper-button-prev top-[18px]"></button>
+          <h2 class="text-2xl font-bold  text-center">Похожие товары</h2>
+          <button class="swiper-button-next top-[18px]"></button>
+        </div>
+        <div class="w-full grid grid-cols-2 landscape:grid-cols-4 gap-x-6 swiper-carousel relative overflow-hidden pt-1" data-swiper-id="1">
+          <div class="swiper-wrapper items-center">
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">BERKERTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">52</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">EASTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1159<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">MARKS & SPENCER</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_1_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_2_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_3_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">895<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">PER UNA</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">40</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">BERKERTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">52</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">EASTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1159<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">MARKS & SPENCER</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_1_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_2_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_3_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">895<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">PER UNA</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">40</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-5 py-4 border-b-[1px] border-gray-400">
+      <div class="relative swiper-object">
+        <div class="swiper-navigation mb-6" data-swiper-id="2">
+          <button class="swiper-button-prev top-[18px]"></button>
+          <h2 class="text-2xl font-bold mb-6 text-center">Распродажа</h2>
+          <button class="swiper-button-next top-[18px]"></button>
+        </div>
+        <div class="w-full grid grid-cols-2 landscape:grid-cols-4 gap-x-6 swiper-carousel relative overflow-hidden pt-1" data-swiper-id="2">
+          <div class="swiper-wrapper items-center">
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">BERKERTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">52</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">EASTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1159<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">MARKS & SPENCER</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_1_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_2_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_3_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">895<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">PER UNA</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">40</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">BERKERTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">52</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">EASTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1159<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">MARKS & SPENCER</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_1_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_2_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_3_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">895<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">PER UNA</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">40</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-5 py-4 border-b-[1px] border-gray-400">
+      <div class="relative swiper-object">
+        <div class="swiper-navigation mb-6" data-swiper-id="3">
+          <button class="swiper-button-prev top-[18px]"></button>
+          <h2 class="text-2xl font-bold mb-6 text-center">Вы смотрели</h2>
+          <button class="swiper-button-next top-[18px]"></button>
+        </div>
+        <div class="w-full grid grid-cols-2 landscape:grid-cols-4 gap-x-6 swiper-carousel relative overflow-hidden pt-1" data-swiper-id="3">
+          <div class="swiper-wrapper items-center">
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">BERKERTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">52</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">EASTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1159<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">MARKS & SPENCER</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_1_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_2_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_3_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">895<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">PER UNA</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">40</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="blue-icon">New</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/03/14/cff2d185-be6e-11ed-a271-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">BERKERTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">52</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/17/5a90ea77-dce0-11ed-a279-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1011<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">EASTEX</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_1_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_2_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="green-icon">Post</span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/2023/04/28/8f9e88b7-e4e0-11ed-a27f-107b444a83b2_3_enl.jpg" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">1159<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">MARKS & SPENCER</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">54</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-frame flex flex-col justify-between">
+              <div class="swiper-promo overflow-hidden relative">
+                <div class="swiper-wrapper items-center">
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_1_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_2_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide"><span class="undefined"></span><img class="w-full" src="https://seconom24.ru/published/publicdata/U225415/attachments/SC/cwebp/2023/02/22/f0e188ca-b0ef-11ed-a26e-107b444a83b2_3_enl.webp" loading="lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="flex flex-col flex-1 h-full justify-between">
+                <div class="main-brief h-full">
+                  <div class="main-brief-block h-full flex flex-col justify-between">
+                    <div class="brief-name">
+                      <div class="font-medium text-xl pt-2">895<span class="pl-1 font-medium ">₽</span></div><a class="mr-1" href="#">Юбка</a><span class="font-medium inline-block">PER UNA</span>
+                    </div>
+                    <ul class="pt-1">
+                      <li><span>Размер:</span><span class="pl-1 font-medium">40</span></li>
+                      <li><span class="block ns:inline pr-1">Состояние:</span><span class="font-medium">Хорошее</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-bottom pt-2">
+                  <div class="flex justify-around ">
+                    <div class="ico_favorites">
+                      <svg class="w-6 h-6 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"></path>
+                      </svg>
+                    </div>
+                    <div class="ico_bascet text-primary-600">
+                      <svg class="w-16 h-6 fill-current border-[2px] rounded-md border-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"></path>
+                        <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="18.5" r="1.5"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function timer() {
+        return {
+          minutes: "00",
+          seconds: "00",
+          endTime: new Date(
+            "December 31, 2025 23:59:59 GMT+0530"
+          ).getTime(),
+          now: new Date().getTime(),
+          timeLeft: 0,
+          countdown: function () {
+            let counter = setInterval(() => {
+              this.now = new Date().getTime();
+              this.timeLeft = (this.endTime - this.now) / 1000;
+              this.seconds = this.format(this.timeLeft % 60);
+              this.minutes = this.format(this.timeLeft / 60) % 60;
+      
+              if (this.timeLeft <= 0) {
+                clearInterval(counter);
+                this.seconds = "00";
+                this.minutes = "00";
+              }
+            }, 1000);
+          },
+          format: function (value) {
+            if (value < 10) {
+              return "0" + Math.floor(value);
+            } else return Math.floor(value);
+          },
+        };
+      }
+    </script>
         <div class="btn-up btn-up_hide fixed bg-primary-600 right-5 bottom-12 rounded-[22px]
     w-11 h-11 z-30 transition-opacity duration-500
     before:content-[''] before:text-center before:absolute before:w-5 before:h-5 before:left-3
