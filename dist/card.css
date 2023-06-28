@@ -604,6 +604,9 @@ video {
 }.my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }.my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -686,6 +689,8 @@ video {
   height: 1.5rem;
 }.h-8{
   height: 2rem;
+}.h-auto{
+  height: auto;
 }.h-full{
   height: 100%;
 }.h-screen{
@@ -714,8 +719,6 @@ video {
   width: 13rem;
 }.w-6{
   width: 1.5rem;
-}.w-8{
-  width: 2rem;
 }.w-\[86vw\]{
   width: 86vw;
 }.w-full{
