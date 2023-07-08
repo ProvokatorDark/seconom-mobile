@@ -468,11 +468,6 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
-}tr.active{
-  border-radius: 0.25rem;
-  outline-style: solid;
-  outline-offset: 0px;
-  outline-color: #60a5fa;
 }.fixed{
   position: fixed;
 }.absolute{
@@ -1234,7 +1229,7 @@ video {
   opacity: 0.8;
   --tw-content: "";
   content: var(--tw-content);-o-border-image:linear-gradient(90deg, #374151, #fff);border-image:linear-gradient(90deg, #374151, #fff);border-image-slice:2;
-}[x-cloak]{display:none !important}.preloader-remove{opacity:0;z-index:-10}.btn-up_hide{display:none}.btn-up_hiding{opacity:0}[x-cloak]{display:none !important}#player{pointer-events:none}.before\:absolute::before{
+}[x-cloak]{display:none !important}.preloader-remove{opacity:0;z-index:-10}.btn-up_hide{display:none}.btn-up_hiding{opacity:0}.before\:absolute::before{
   content: var(--tw-content);
   position: absolute;
 }.before\:left-3::before{
