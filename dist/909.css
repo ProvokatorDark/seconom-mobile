@@ -495,7 +495,7 @@ video {
   z-index: 10;
   min-width: 50px;
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.875rem;
@@ -1648,7 +1648,7 @@ video {
   opacity: 0.8;
   --tw-content: "";
   content: var(--tw-content);-o-border-image:linear-gradient(90deg, #dca5a5, #fff);border-image:linear-gradient(90deg, #dca5a5, #fff);border-image-slice:2;
-}[x-cloak]{display:none !important}.preloader-remove{opacity:0;z-index:-10}.btn-up_hide{display:none}.btn-up_hiding{opacity:0}.swiper-horizontal>.swiper-pagination-category{position:absolute;text-align:right;transition:.3s opacity;transform:translate3d(0, 0, 0);z-index:10;bottom:0;right:0;width:100%}@media (min-width: 1280px){.xl\:container{
+}[x-cloak]{display:none !important}.btn-up_hide{display:none}.btn-up_hiding{opacity:0}.mlevel-1{border-left:6px solid #0369a1}[x-cloak]{display:none !important}.swiper-horizontal>.swiper-pagination-category{position:absolute;text-align:right;transition:.3s opacity;transform:translate3d(0, 0, 0);z-index:10;bottom:0;right:0;width:100%}span.active svg{color:#0369a1}a.active{color:#0369a1}.aside-dd-menu a.active{background-color:#dbeafe}@media (min-width: 1280px){.xl\:container{
     width: 100%;
   }@media (min-width: 360px){.xl\:container{
       max-width: 360px;
