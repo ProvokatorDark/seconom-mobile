@@ -710,8 +710,8 @@ video {
   height: 40px;
 }.h-\[460px\]{
   height: 460px;
-}.h-\[55px\]{
-  height: 55px;
+}.h-\[71px\]{
+  height: 71px;
 }.h-\[calc\(100vh_-_71px\)\]{
   height: calc(100vh - 71px);
 }.h-auto{
@@ -724,8 +724,6 @@ video {
   min-height: 1.5rem;
 }.min-h-\[20px\]{
   min-height: 20px;
-}.w-1\/2{
-  width: 50%;
 }.w-10{
   width: 2.5rem;
 }.w-11{
@@ -744,8 +742,6 @@ video {
   width: 5rem;
 }.w-24{
   width: 6rem;
-}.w-28{
-  width: 7rem;
 }.w-3\/4{
   width: 75%;
 }.w-3\/5{
@@ -754,6 +750,8 @@ video {
   width: 8rem;
 }.w-4{
   width: 1rem;
+}.w-40{
+  width: 10rem;
 }.w-5{
   width: 1.25rem;
 }.w-52{
@@ -784,10 +782,10 @@ video {
   width: 400px;
 }.w-\[40px\]{
   width: 40px;
+}.w-\[45\%\]{
+  width: 45%;
 }.w-\[460px\]{
   width: 460px;
-}.w-\[55px\]{
-  width: 55px;
 }.w-\[65\%\]{
   width: 65%;
 }.w-\[78\%\]{
@@ -1836,9 +1834,6 @@ video {
 }.hover\:bg-gray-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}.hover\:bg-indigo-800:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 48 163 / var(--tw-bg-opacity));
 }.hover\:bg-neutral-100:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1854,6 +1849,9 @@ video {
 }.hover\:bg-primary-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(7 89 133 / var(--tw-bg-opacity));
+}.hover\:text-neutral-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }.hover\:text-primary-600:hover{
   --tw-text-opacity: 1;
   color: rgb(2 132 199 / var(--tw-text-opacity));
@@ -1863,9 +1861,6 @@ video {
 }.hover\:text-tertiary:hover{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}.hover\:text-white:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }.hover\:no-underline:hover{
   text-decoration-line: none;
 }.hover\:shadow-lg:hover{
@@ -1949,9 +1944,6 @@ video {
 }.focus\:ring-primary-500:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(14 165 233 / var(--tw-ring-opacity));
-}.focus\:ring-primary-600:focus{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(2 132 199 / var(--tw-ring-opacity));
 }.focus\:ring-primary-700:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(3 105 161 / var(--tw-ring-opacity));
@@ -2124,6 +2116,8 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }.md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }.md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }.md\:flex-row{
     flex-direction: row;
   }.md\:items-center{
@@ -2138,6 +2132,9 @@ video {
     padding-right: 1.5rem;
   }.md\:text-left{
     text-align: left;
+  }.md\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }@media (min-width: 1024px){.lg\:static{
     position: static;
@@ -2169,8 +2166,6 @@ video {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }.lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }.lg\:grid-cols-5{
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }.lg\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }.lg\:justify-start{
@@ -2201,10 +2196,27 @@ video {
   }.lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }.lg\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }@media (min-width: 1280px){.xl\:mx-auto{
     margin-left: auto;
     margin-right: auto;
+  }.xl\:h-10{
+    height: 2.5rem;
+  }.xl\:h-11{
+    height: 2.75rem;
+  }.xl\:h-14{
+    height: 3.5rem;
+  }.xl\:w-10{
+    width: 2.5rem;
+  }.xl\:w-14{
+    width: 3.5rem;
+  }.xl\:w-28{
+    width: 7rem;
+  }.xl\:w-52{
+    width: 13rem;
   }.xl\:px-3{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -2215,6 +2227,10 @@ video {
 }@media (min-width: 1536px){.\32xl\:mx-auto{
     margin-left: auto;
     margin-right: auto;
+  }.\32xl\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }.\32xl\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }.\32xl\:px-3{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
