@@ -1550,6 +1550,9 @@ video {
 }.ring-primary-600{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(2 132 199 / var(--tw-ring-opacity));
+}.ring-primary-700{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(3 105 161 / var(--tw-ring-opacity));
 }.ring-offset-2{
   --tw-ring-offset-width: 2px;
 }.blur{
@@ -2056,9 +2059,9 @@ video {
   justify-content: space-around;
 }.group.list-grid .group-\[\.list-grid\]\:p-4{
   padding: 1rem;
-}.group.active .group-\[\.active\]\:text-primary-600{
+}.group.active .group-\[\.active\]\:text-primary-700{
   --tw-text-opacity: 1;
-  color: rgb(2 132 199 / var(--tw-text-opacity));
+  color: rgb(3 105 161 / var(--tw-text-opacity));
 }.peer:focus ~ .peer-focus\:border-primary-700{
   --tw-border-opacity: 1;
   border-color: rgb(3 105 161 / var(--tw-border-opacity));
