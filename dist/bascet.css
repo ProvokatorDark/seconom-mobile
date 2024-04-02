@@ -2151,9 +2151,11 @@ video {
   padding: 1rem;
 }.group.list-grid .group-\[\.list-grid\]\:pb-3{
   padding-bottom: 0.75rem;
-}.group.list-grid .group-\[\.list-grid\]\:text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
+}.group.list-grid .group-\[\.list-grid\]\:pt-2{
+  padding-top: 0.5rem;
+}.group.list-grid .group-\[\.list-grid\]\:text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }.peer:focus ~ .peer-focus\:border-primary-700{
   --tw-border-opacity: 1;
   border-color: rgb(3 105 161 / var(--tw-border-opacity));
@@ -2350,9 +2352,9 @@ video {
     flex-direction: row;
   }.group.list-grid .xl\:group-\[\.list-grid\]\:pb-0{
     padding-bottom: 0px;
-  }.group.list-grid .xl\:group-\[\.list-grid\]\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  }.group.list-grid .xl\:group-\[\.list-grid\]\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }@media (min-width: 1536px){.\32xl\:mx-auto{
     margin-left: auto;
