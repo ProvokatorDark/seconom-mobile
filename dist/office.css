@@ -2281,6 +2281,8 @@ select {
   display: flex;
 }.group.list-grid .group-\[\.list-grid\]\:hidden {
   display: none;
+}.group.list-grid .group-\[\.list-grid\]\:h-6 {
+  height: 1.5rem;
 }.group.list-grid .group-\[\.list-grid\]\:h-64 {
   height: 16rem;
 }.group.list-grid .group-\[\.list-grid\]\:max-h-64 {
