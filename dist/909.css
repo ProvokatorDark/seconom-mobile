@@ -825,16 +825,12 @@ video {
   width: 100px;
 }.w-\[23\%\]{
   width: 23%;
-}.w-\[250px\]{
-  width: 250px;
 }.w-\[255px\]{
   width: 255px;
 }.w-\[265px\]{
   width: 265px;
 }.w-\[280px\]{
   width: 280px;
-}.w-\[290px\]{
-  width: 290px;
 }.w-\[300px\]{
   width: 300px;
 }.w-\[35\%\]{
@@ -2298,8 +2294,8 @@ video {
     font-size: 0.75rem;
     line-height: 1rem;
   }
-}@media (min-width: 1280px){.xl\:left-0{
-    left: 0px;
+}@media (min-width: 1280px){.xl\:left-\[1px\]{
+    left: 1px;
   }.xl\:left-auto{
     left: auto;
   }.xl\:right-\[1px\]{
@@ -2371,4 +2367,8 @@ video {
 }@media (orientation: landscape){.landscape\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}.\[\&\:nth-child\(5\)\]\:left-auto:nth-child(5){
+  left: auto;
+}.\[\&\:nth-child\(5\)\]\:right-\[1px\]:nth-child(5){
+  right: 1px;
 }

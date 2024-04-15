@@ -956,16 +956,12 @@ select {
   width: 100px;
 }.w-\[23\%\] {
   width: 23%;
-}.w-\[250px\] {
-  width: 250px;
 }.w-\[255px\] {
   width: 255px;
 }.w-\[265px\] {
   width: 265px;
 }.w-\[280px\] {
   width: 280px;
-}.w-\[290px\] {
-  width: 290px;
 }.w-\[300px\] {
   width: 300px;
 }.w-\[35\%\] {
@@ -2595,8 +2591,8 @@ select {
   }
 }@media (min-width: 1280px) {
 
-  .xl\:left-0 {
-    left: 0px;
+  .xl\:left-\[1px\] {
+    left: 1px;
   }
 
   .xl\:left-auto {
@@ -2726,4 +2722,8 @@ select {
   .landscape\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}.\[\&\:nth-child\(5\)\]\:left-auto:nth-child(5) {
+  left: auto;
+}.\[\&\:nth-child\(5\)\]\:right-\[1px\]:nth-child(5) {
+  right: 1px;
 }
