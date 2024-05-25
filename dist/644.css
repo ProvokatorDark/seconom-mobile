@@ -1699,8 +1699,6 @@ video {
   transition-timing-function: linear;
 }.ease-out{
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}.\[-moz-appearance\:_textfield\]{
-  -moz-appearance: textfield;
 }.level-1:after{
   position: absolute;
   top: 50%;
@@ -2430,14 +2428,4 @@ video {
 }@media (orientation: landscape){.landscape\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-}.\[\&\:\:-webkit-inner-spin-button\]\:m-0::-webkit-inner-spin-button{
-  margin: 0px;
-}.\[\&\:\:-webkit-inner-spin-button\]\:appearance-none::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-          appearance: none;
-}.\[\&\:\:-webkit-outer-spin-button\]\:m-0::-webkit-outer-spin-button{
-  margin: 0px;
-}.\[\&\:\:-webkit-outer-spin-button\]\:appearance-none::-webkit-outer-spin-button{
-  -webkit-appearance: none;
-          appearance: none;
 }
