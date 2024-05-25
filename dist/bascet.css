@@ -1527,6 +1527,8 @@ video {
   line-height: 1.75rem;
 }.leading-8{
   line-height: 2rem;
+}.leading-9{
+  line-height: 2.25rem;
 }.leading-\[1\.6\]{
   line-height: 1.6;
 }.leading-\[10em\]{
