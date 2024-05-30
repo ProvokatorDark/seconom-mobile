@@ -1012,6 +1012,8 @@ select {
   min-width: 0px;
 }.min-w-\[180px\] {
   min-width: 180px;
+}.min-w-\[60px\] {
+  min-width: 60px;
 }.min-w-\[80px\] {
   min-width: 80px;
 }.min-w-full {
@@ -1600,8 +1602,8 @@ select {
 }.text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}.text-\[26px\] {
-  font-size: 26px;
+}.text-\[25px\] {
+  font-size: 25px;
 }.text-base {
   font-size: 1rem;
   line-height: 1.5rem;
