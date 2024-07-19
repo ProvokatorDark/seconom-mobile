@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <script defer src="auxpage_nashi-skidki_tpm.js"></script><link href="auxpage_nashi-skidki_tpm.css" rel="stylesheet"></head>
+  <script defer src="gocheckout.js"></script><link href="src_scss_gocheckout_scss.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base" x-data="{isLeftMenu:false}">
     <div class="flex flex-col min-h-screen">
       <!--include ../molecules/menu-clean-->
@@ -335,53 +335,163 @@
           </ul>
         </div>
       </section>
-      <div class="mx-auto container">
-        <div class="flex items-center">
-          <nav class="bg-white py-3 w-full">
-            <ol class="list-reset flex">
-              <li class="text-sm lg:text-xl"><a class="text-primary-700" href="#">Сэконом</a><span class="text-gray-500 mx-2">/</span>
-              </li>
-              <li class="text-sm lg:text-xl"><a class="text-gray-500" href="#">Скидки</a>
-              </li>
-            </ol>
-          </nav>
+      <main class="ns:px-2 sm:px-4 md:px-6 xl:container xl:mx-auto flex-1" x-data="appController()">
+        <div class="flex flex-col text-gray-700 gap-3 text-sm">
+          <h3 class="text-lg text-bold">Шаг 1</h3>
+          <div class="separator border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%)"></div>
+          <div>
+            <div>
+              <div class="flex justify-between items-center "><i class="text-lg fa-solid fa-city"></i>
+                <div class="flex justify-between items-center w-full ml-3"><span>г.Заречный - Свердловская область</span>
+                  <div class="h-6 w-6" @click="modalCity = true; overlay=true">
+                    <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="separator border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%)"></div>
+          <div>
+            <div>
+              <div class="flex justify-between items-center "><i class="text-lg fa-solid fa-id-card"></i>
+                <div class="flex justify-between items-center w-full ml-3">
+                  <div class="flex flex-col gap-1">
+                    <p>Владимир Петрушенко</p>
+                    <p>+7(936) 032-98-21</p>
+                    <p>email@mail.ru</p>
+                  </div>
+                  <div class="h-6 w-6" @click="modalCustomerData = true; overlay=true">
+                    <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="separator border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%)"></div>
         </div>
-        <div class="py-2">
-          <h1 class="text-xl font-semibold lg:text-3xl">Скидки магазина "Сэконом"</h1>
+        <div class="modal">
+          <div class="customers relative" x-show="modalCustomerData">
+            <div class="fixed bottom-0 inset-x-0 w-full bg-white z-40 rounded-t-[20px] pb-6">
+              <div class="h-8" @click="modalCustomerData =false; overlay=false">
+                <div class="absolute right-3 top-1"><i class="fa fa-times text-2xl text-neutral-400" aria-hidden="true"></i></div>
+              </div>
+              <div class="flex flex-col justify-center items-center w-full gap-4">
+                <h1 class="text-xl font-bold">Данные получателя</h1>
+                <div class="w-3/4">
+                  <form class="flex flex-col" autocomplete="off">
+                    <div>
+                      <div>
+                        <fieldset>
+                          <div>
+                            <div>
+                              <div label="Имя и фамилия">
+                                <label>
+                                  <div>
+                                    <div class="relative flex">
+                                      <input class="rounded-lg border-2 border-neutral-400 w-full" type="text" name="" maxlength="" required>
+                                      <p class="absolute left-[10px] top-[5px] text-xs text-neutral-400 leading-3">Имя и фамилия</p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div>
+                              <div label="Телефон">
+                                <label>
+                                  <div>
+                                    <div class="relative flex">
+                                      <input class="rounded-lg border-2 border-neutral-400 w-full" type="tel" name="" maxlength="20" required>
+                                      <p class="absolute left-[10px] top-[5px] text-xs text-neutral-400 leading-3">Телефон</p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div>
+                              <div label="email">
+                                <label>
+                                  <div>
+                                    <div class="relative flex">
+                                      <input class="rounded-lg border-2 border-neutral-400 w-full" type="email" name="" maxlength="20" required>
+                                      <p class="absolute left-[10px] top-[5px] text-xs text-neutral-400 leading-3">Email</p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="w-full mt-4">
+                      <button class="bg-primary-700 w-full rounded-lg" type="submit">
+                        <div class="p-3 text-white">Сохранить</div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="customers relative" x-show="modalCity">
+            <div class="fixed bottom-0 inset-x-0 w-full bg-white z-40 rounded-t-[20px] pb-6">
+              <div class="h-8" @click="modalCity = false; overlay=false">
+                <div class="absolute right-3 top-1"><i class="fa fa-times text-2xl text-neutral-400" aria-hidden="true"></i></div>
+              </div>
+              <div class="flex flex-col justify-center items-center w-full gap-4">
+                <h1 class="text-xl font-bold">Населенный пункт</h1>
+                <div class="w-3/4">
+                  <form class="flex flex-col" autocomplete="off">
+                    <div>
+                      <div>
+                        <fieldset>
+                          <div>
+                            <div>
+                              <div label="Населенный пункт">
+                                <label>
+                                  <div>
+                                    <div class="relative flex">
+                                      <input class="rounded-lg border-2 border-neutral-400 w-full" type="text" name="" maxlength="" required>
+                                      <p class="absolute left-[10px] top-[5px] text-xs text-neutral-400 leading-3">Населенный пункт</p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="w-full mt-4">
+                      <button class="bg-primary-700 w-full rounded-lg" type="submit">
+                        <div class="p-3 text-white">Сохранить</div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="py-2 lg:text-xl">
-          <div class="relative w-full py-3"><img class="h-auto w-full lg:max-w-2xl" src="384bd24678c11f2e24a9.jpg"></div>
-          <p class="mt-1"> Магазин качественного секонд хенда из Европы «Сэконом»  настроил инструмент, позволяющий выгодно покупать и экономить еще больше на приобретении  качественных брендовых изделий — система скидок.</p>
-          <p class="mt-1">Любите шопинг? Предпочитаете качество и стиль? Решили  одеваться не как все и выделяться из толпы, пользоваться качественными вещами и  приятными мелочами в быту? Хотите сделать групповой заказ вместе с родственниками  и друзьями? Добро пожаловать!</p>
-          <p class="mt-1">От суммы выкупленных товаров будет напрямую зависеть ваша  скидка:</p>
-          <table class="min-w-full mt-3 lg:min-w-[23%]">
-            <tbody></tbody>
-            <tr class="odd:bg-gray-100">
-              <td class="font-medium">Сумма выкупа</td>
-              <td>Скидка</td>
-            </tr>
-            <tr class="odd:bg-gray-100">
-              <td class="font-medium">10000 ₽</td>
-              <td>5%</td>
-            </tr>
-            <tr class="odd:bg-gray-100">
-              <td class="font-medium">30000 ₽</td>
-              <td>7%</td>
-            </tr>
-            <tr class="odd:bg-gray-100">
-              <td class="font-medium">50000 ₽</td>
-              <td>10%</td>
-            </tr>
-            <tr class="odd:bg-gray-100">
-              <td class="font-medium">100000 ₽</td>
-              <td>15%</td>
-            </tr>
-          </table>
-          <p class="mt-1">Мы позаботились о конфиденциальности и удобстве ваших приобретений.  К услугам покупателя личный кабинет, в котором его индивидуальная скидка будет  рассчитываться отдельно. Если вы регистрируетесь на сайте нашего интернет-магазина  повторно, то история покупок не сохраняется. То есть, статистика заказов будет  вестись заново, с нуля. Пользоваться бонусом можно только через тот кабинет, в  котором его оформили.</p>
-          <p class="mt-1 text-accent-600">Всех новых покупателей ждет приветственная скидка в 5% от  стоимости товара.</p>
-          <p class="mt-1">Специальные цены и акционные товары не связаны с  дисконтами, и они на них не распространяются</p>
-        </div>
-      </div>
+        <div class="overlay fixed top-0 left-0 h-full w-full z-10 bg-[rgba(0,0,0,0.5)]" style="display: none;" x-show="overlay"></div>
+      </main>
+      <script>
+        let appController = function () {
+          return{
+            modalCustomerData:false,
+            modalCity:false,
+            overlay:false,
+          }
+        }
+      </script>
             <div class="btn-up btn-up_hide fixed bg-primary-700 left-5 bottom-12 rounded-[22px]
     w-11 h-11 z-40 transition-opacity duration-500
     before:content-[''] before:text-center before:absolute before:w-5 before:h-5 before:left-3
