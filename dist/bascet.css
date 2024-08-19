@@ -669,8 +669,6 @@ video {
   order: 3;
 }.order-4{
   order: 4;
-}.order-first{
-  order: -9999;
 }.float-left{
   float: left;
 }.-m-3{
@@ -993,8 +991,6 @@ video {
   width: 35%;
 }.w-\[350px\]{
   width: 350px;
-}.w-\[388px\]{
-  width: 388px;
 }.w-\[390px\]{
   width: 390px;
 }.w-\[40\%\]{
@@ -1009,8 +1005,6 @@ video {
   width: 48px;
 }.w-\[50\%\]{
   width: 50%;
-}.w-\[501px\]{
-  width: 501px;
 }.w-\[60\%\]{
   width: 60%;
 }.w-\[65\%\]{
@@ -1052,6 +1046,8 @@ video {
   max-width: 56rem;
 }.max-w-\[315px\]{
   max-width: 315px;
+}.max-w-\[50\%\]{
+  max-width: 50%;
 }.max-w-\[calc\(100vw_-_7rem_-_1rem\)\]{
   max-width: calc(100vw - 7rem - 1rem);
 }.max-w-xs{
@@ -1062,9 +1058,13 @@ video {
   flex: 1 1 auto;
 }.flex-shrink-0{
   flex-shrink: 0;
+}.shrink{
+  flex-shrink: 1;
 }.shrink-0{
   flex-shrink: 0;
 }.flex-grow{
+  flex-grow: 1;
+}.grow{
   flex-grow: 1;
 }.table-auto{
   table-layout: auto;
@@ -1149,8 +1149,6 @@ video {
   place-content: center;
 }.items-start{
   align-items: flex-start;
-}.items-end{
-  align-items: flex-end;
 }.items-center{
   align-items: center;
 }.items-stretch{
@@ -2896,6 +2894,8 @@ video {
     width: 7rem;
   }.xl\:w-52{
     width: 13rem;
+  }.xl\:w-\[400px\]{
+    width: 400px;
   }.xl\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }.xl\:px-3{
@@ -2928,31 +2928,35 @@ video {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-}@media (min-width: 1536px){.\32xl\:order-last{
-    order: 9999;
-  }.\32xl\:mx-auto{
+}@media (min-width: 1536px){.\32xl\:mx-auto{
     margin-left: auto;
     margin-right: auto;
   }.\32xl\:ml-\[24px\]{
     margin-left: 24px;
+  }.\32xl\:w-\[388px\]{
+    width: 388px;
+  }.\32xl\:w-\[501px\]{
+    width: 501px;
   }.\32xl\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }.\32xl\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }.\32xl\:flex-row{
     flex-direction: row;
-  }.\32xl\:items-start{
-    align-items: flex-start;
-  }.\32xl\:border-none{
-    border-style: none;
   }.\32xl\:px-3{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }.\32xl\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }.\32xl\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
   }.\32xl\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }.\32xl\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }.\32xl\:shadow-neutral-500\/50{
     --tw-shadow-color: rgb(107 114 128 / 0.5);
