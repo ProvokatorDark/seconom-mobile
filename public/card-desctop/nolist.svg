@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="963"
+   height="918"
+   viewBox="0 0 963 918"
+   fill="none"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="nolike2.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.85729847"
+     inkscape:cx="481.16264"
+     inkscape:cy="459"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="1071"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <ellipse
+     cx="481.5"
+     cy="459"
+     rx="481.5"
+     ry="459"
+     fill="#2EABE0"
+     id="ellipse1" />
+  <path
+     d="M780.08 677.862L673.501 192.846C673.003 190.582 671.548 188.644 669.513 187.533L559.251 127.393C557.745 126.571 556.016 126.255 554.318 126.491L169.879 179.915C165.31 180.549 162.228 184.907 163.149 189.428L282.756 776.702C283.636 781.019 287.839 783.817 292.159 782.96L773.831 687.419C778.224 686.547 781.042 682.238 780.08 677.862Z"
+     fill="#F0F0F0"
+     stroke="black"
+     stroke-width="13"
+     id="path1" />
+  <line
+     y1="-4.5"
+     x2="402.25"
+     y2="-4.5"
+     transform="matrix(0.989552 -0.144179 0.140914 0.990022 246.984 333.529)"
+     stroke="black"
+     stroke-width="9"
+     id="line1" />
+  <line
+     y1="-4.5"
+     x2="327.901"
+     y2="-4.5"
+     transform="matrix(0.989758 -0.142723 0.139492 0.990228 253.844 381.723)"
+     stroke="black"
+     stroke-width="9"
+     id="line2" />
+  <line
+     y1="-4.5"
+     x2="385.094"
+     y2="-4.5"
+     transform="matrix(0.989552 -0.144179 0.140914 0.990022 260.57 428.962)"
+     stroke="black"
+     stroke-width="9"
+     id="line3" />
+  <line
+     y1="-4.5"
+     x2="397.486"
+     y2="-4.5"
+     transform="matrix(0.989211 -0.146551 0.143232 0.989681 267.367 476.679)"
+     stroke="black"
+     stroke-width="9"
+     id="line4" />
+  <line
+     y1="-4.5"
+     x2="397.486"
+     y2="-4.5"
+     transform="matrix(0.989211 -0.146551 0.143232 0.989681 276.312 526.018)"
+     stroke="black"
+     stroke-width="9"
+     id="line5" />
+  <path
+     d="M560.598 224.401L556.24 134.301C556.127 131.974 558.594 130.413 560.649 131.509L666.994 188.255C669.325 189.499 669.026 192.932 666.514 193.753L564.527 227.108C562.645 227.723 560.694 226.379 560.598 224.401Z"
+     fill="#F0F0F0"
+     stroke="black"
+     stroke-width="10"
+     id="path5" />
+</svg>
