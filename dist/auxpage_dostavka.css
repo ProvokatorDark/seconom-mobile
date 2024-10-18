@@ -552,6 +552,8 @@ video {
   left: 10px;
 }.left-\[180px\]{
   left: 180px;
+}.left-\[24px\]{
+  left: 24px;
 }.left-\[5\%\]{
   left: 5%;
 }.left-auto{
@@ -590,6 +592,8 @@ video {
   top: 0px;
 }.top-\[10px\]{
   top: 10px;
+}.top-\[16px\]{
+  top: 16px;
 }.top-\[18px\]{
   top: 18px;
 }.top-\[19px\]{
@@ -844,12 +848,16 @@ video {
   height: 16px;
 }.h-\[18px\]{
   height: 18px;
+}.h-\[20px\]{
+  height: 20px;
 }.h-\[28px\]{
   height: 28px;
 }.h-\[30px\]{
   height: 30px;
 }.h-\[310px\]{
   height: 310px;
+}.h-\[33px\]{
+  height: 33px;
 }.h-\[40px\]{
   height: 40px;
 }.h-\[48px\]{
@@ -944,6 +952,10 @@ video {
   width: 128px;
 }.w-\[130px\]{
   width: 130px;
+}.w-\[160px\]{
+  width: 160px;
+}.w-\[165px\]{
+  width: 165px;
 }.w-\[16px\]{
   width: 16px;
 }.w-\[180px\]{
@@ -974,6 +986,8 @@ video {
   width: 300px;
 }.w-\[30px\]{
   width: 30px;
+}.w-\[343px\]{
+  width: 343px;
 }.w-\[35\%\]{
   width: 35%;
 }.w-\[350px\]{
@@ -1052,8 +1066,6 @@ video {
 }.max-w-max{
   max-width: -moz-max-content;
   max-width: max-content;
-}.max-w-screen-md{
-  max-width: 768px;
 }.flex-1{
   flex: 1 1 0%;
 }.flex-auto{
@@ -1189,6 +1201,8 @@ video {
   gap: 1.5rem;
 }.gap-8{
   gap: 2rem;
+}.gap-\[2px\]{
+  gap: 2px;
 }.gap-\[8px\]{
   gap: 8px;
 }.gap-x-3{
@@ -1254,6 +1268,8 @@ video {
   word-break: normal;
 }.rounded{
   border-radius: 0.25rem;
+}.rounded-\[12px\]{
+  border-radius: 12px;
 }.rounded-\[16px\]{
   border-radius: 16px;
 }.rounded-\[20px\]{
@@ -1262,6 +1278,8 @@ video {
   border-radius: 22px;
 }.rounded-\[7px\]{
   border-radius: 7px;
+}.rounded-\[8px\]{
+  border-radius: 8px;
 }.rounded-full{
   border-radius: 9999px;
 }.rounded-lg{
@@ -1414,6 +1432,9 @@ video {
 }.bg-\[\#655193\]{
   --tw-bg-opacity: 1;
   background-color: rgb(101 81 147 / var(--tw-bg-opacity));
+}.bg-\[\#f2f3f5\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 243 245 / var(--tw-bg-opacity));
 }.bg-\[\#f44336\]{
   --tw-bg-opacity: 1;
   background-color: rgb(244 67 54 / var(--tw-bg-opacity));
@@ -1569,6 +1590,10 @@ video {
   background-image: url(f9b78d3695ad98cf8ea3.png);
 }.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/logo-pochta\.svg\'\)\]{
   background-image: url(e22fe49fd68d198e9b20.svg);
+}.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/yandexDelivery\.svg\'\)\]{
+  background-image: url(7e32d6c0e66f8af1e1b5.svg);
+}.bg-\[url\(\'\.\.\/assets\/svg\/logo_color\.svg\'\)\]{
+  background-image: url(430a2bc8abaac94554ba.svg);
 }.bg-\[url\(\'\.\.\/assets\/svg\/pencil\.svg\'\)\]{
   background-image: url(c59f18a18b8b4aad2e34.svg);
 }.bg-gradient-to-r{
