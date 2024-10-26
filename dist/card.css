@@ -607,6 +607,8 @@ video {
   top: -0.875rem;
 }.bottom-0{
   bottom: 0px;
+}.bottom-1{
+  bottom: 0.25rem;
 }.bottom-10{
   bottom: 2.5rem;
 }.bottom-12{
@@ -635,6 +637,8 @@ video {
   left: auto;
 }.right-0{
   right: 0px;
+}.right-1{
+  right: 0.25rem;
 }.right-2{
   right: 0.5rem;
 }.right-3{
@@ -925,6 +929,10 @@ video {
   height: 18px;
 }.h-\[20px\]{
   height: 20px;
+}.h-\[24px\]{
+  height: 24px;
+}.h-\[25px\]{
+  height: 25px;
 }.h-\[28px\]{
   height: 28px;
 }.h-\[30px\]{
@@ -941,6 +949,8 @@ video {
   height: 56px;
 }.h-\[600px\]{
   height: 600px;
+}.h-\[60px\]{
+  height: 60px;
 }.h-\[71px\]{
   height: 71px;
 }.h-\[calc\(100vh_-_71px\)\]{
@@ -1023,6 +1033,12 @@ video {
   width: 1000px;
 }.w-\[100px\]{
   width: 100px;
+}.w-\[110px\]{
+  width: 110px;
+}.w-\[116px\]{
+  width: 116px;
+}.w-\[124px\]{
+  width: 124px;
 }.w-\[128px\]{
   width: 128px;
 }.w-\[130px\]{
@@ -1665,10 +1681,10 @@ video {
   background-image: url(f9b78d3695ad98cf8ea3.png);
 }.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/logo-pochta\.svg\'\)\]{
   background-image: url(e22fe49fd68d198e9b20.svg);
+}.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/logo-seconom-2\.svg\'\)\]{
+  background-image: url(2c3b5d972d33280ebaca.svg);
 }.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/yandexDelivery\.svg\'\)\]{
   background-image: url(7e32d6c0e66f8af1e1b5.svg);
-}.bg-\[url\(\'\.\.\/assets\/svg\/logo_color\.svg\'\)\]{
-  background-image: url(430a2bc8abaac94554ba.svg);
 }.bg-\[url\(\'\.\.\/assets\/svg\/pencil\.svg\'\)\]{
   background-image: url(c59f18a18b8b4aad2e34.svg);
 }.bg-gradient-to-r{
