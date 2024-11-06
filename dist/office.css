@@ -1071,6 +1071,8 @@ select {
   min-height: 1.5rem;
 }.min-h-\[100px\] {
   min-height: 100px;
+}.min-h-\[1600px\] {
+  min-height: 1600px;
 }.min-h-\[20px\] {
   min-height: 20px;
 }.min-h-\[50px\] {
