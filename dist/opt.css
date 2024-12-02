@@ -973,8 +973,8 @@ video {
   width: 111px;
 }.w-\[116px\]{
   width: 116px;
-}.w-\[124px\]{
-  width: 124px;
+}.w-\[130px\]{
+  width: 130px;
 }.w-\[142px\]{
   width: 142px;
 }.w-\[16px\]{
@@ -1150,6 +1150,8 @@ video {
   animation: spin 1s linear infinite;
 }.cursor-default{
   cursor: default;
+}.cursor-not-allowed{
+  cursor: not-allowed;
 }.cursor-pointer{
   cursor: pointer;
 }.cursor-text{
@@ -1611,6 +1613,8 @@ video {
   --tw-bg-opacity: 0.1;
 }.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/CDEK_logo\.svg\'\)\]{
   background-image: url(82380b113aff1d259f55.svg);
+}.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/generic-green\.svg\'\)\]{
+  background-image: url(03a48c09c5d3ced3ce35.svg);
 }.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/generic\.svg\'\)\]{
   background-image: url(5545ea0fe0adf1dc19fc.svg);
 }.bg-\[url\(\'\.\.\/assets\/svg\/gocheckout\/logo-boxberry\.png\'\)\]{
