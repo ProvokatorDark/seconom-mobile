@@ -550,8 +550,6 @@ video {
   left: 1.25rem;
 }.left-56{
   left: 14rem;
-}.left-\[10px\]{
-  left: 10px;
 }.left-\[180px\]{
   left: 180px;
 }.left-\[24px\]{
@@ -606,8 +604,6 @@ video {
   top: 210px;
 }.top-\[55px\]{
   top: 55px;
-}.top-\[5px\]{
-  top: 5px;
 }.top-\[70px\]{
   top: 70px;
 }.top-\[71px\]{
@@ -750,6 +746,8 @@ video {
   margin-left: 1.25rem;
 }.ml-6{
   margin-left: 1.5rem;
+}.ml-\[10px\]{
+  margin-left: 10px;
 }.ml-\[15\%\]{
   margin-left: 15%;
 }.ml-\[32px\]{
@@ -850,14 +848,20 @@ video {
   height: 100%;
 }.h-\[100px\]{
   height: 100px;
+}.h-\[14px\]{
+  height: 14px;
 }.h-\[16px\]{
   height: 16px;
 }.h-\[18px\]{
   height: 18px;
+}.h-\[20px\]{
+  height: 20px;
 }.h-\[23px\]{
   height: 23px;
 }.h-\[24px\]{
   height: 24px;
+}.h-\[25px\]{
+  height: 25px;
 }.h-\[30px\]{
   height: 30px;
 }.h-\[310px\]{
@@ -868,6 +872,8 @@ video {
   height: 42px;
 }.h-\[48px\]{
   height: 48px;
+}.h-\[50px\]{
+  height: 50px;
 }.h-\[56px\]{
   height: 56px;
 }.h-\[600px\]{
@@ -936,6 +942,8 @@ video {
   width: 8rem;
 }.w-4{
   width: 1rem;
+}.w-4\/5{
+  width: 80%;
 }.w-40{
   width: 10rem;
 }.w-48{
@@ -960,6 +968,8 @@ video {
   width: 1000px;
 }.w-\[100px\]{
   width: 100px;
+}.w-\[104px\]{
+  width: 104px;
 }.w-\[105px\]{
   width: 105px;
 }.w-\[110px\]{
@@ -968,6 +978,8 @@ video {
   width: 111px;
 }.w-\[116px\]{
   width: 116px;
+}.w-\[118px\]{
+  width: 118px;
 }.w-\[130px\]{
   width: 130px;
 }.w-\[142px\]{
@@ -992,6 +1004,8 @@ video {
   width: 250px;
 }.w-\[255px\]{
   width: 255px;
+}.w-\[25px\]{
+  width: 25px;
 }.w-\[265px\]{
   width: 265px;
 }.w-\[280px\]{
@@ -1026,6 +1040,8 @@ video {
   width: 450px;
 }.w-\[48px\]{
   width: 48px;
+}.w-\[52px\]{
+  width: 52px;
 }.w-\[55px\]{
   width: 55px;
 }.w-\[592px\]{
@@ -1048,6 +1064,8 @@ video {
   width: 86vw;
 }.w-\[87px\]{
   width: 87px;
+}.w-\[92px\]{
+  width: 92px;
 }.w-\[calc\(100vw_-_265px\)\]{
   width: calc(100vw - 265px);
 }.w-\[fit-content\]{
@@ -1316,9 +1334,6 @@ video {
 }.rounded-r-lg{
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-}.rounded-t-\[20px\]{
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }.rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -1338,6 +1353,9 @@ video {
   border-width: 1px;
 }.border-\[2px\]{
   border-width: 2px;
+}.border-y-\[0\.5px\]{
+  border-top-width: 0.5px;
+  border-bottom-width: 0.5px;
 }.border-y-\[10px\]{
   border-top-width: 10px;
   border-bottom-width: 10px;
@@ -1346,6 +1364,8 @@ video {
   border-bottom-width: 1px;
 }.border-b-2{
   border-bottom-width: 2px;
+}.border-b-\[0\.5px\]{
+  border-bottom-width: 0.5px;
 }.border-b-\[10px\]{
   border-bottom-width: 10px;
 }.border-b-\[1px\]{
@@ -1438,6 +1458,9 @@ video {
 }.border-red-400{
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}.border-slate-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
 }.border-slate-50{
   --tw-border-opacity: 1;
   border-color: rgb(248 250 252 / var(--tw-border-opacity));
@@ -1671,6 +1694,8 @@ video {
   padding: 1.25rem;
 }.p-6{
   padding: 1.5rem;
+}.p-\[0px\]{
+  padding: 0px;
 }.p-\[12px\]{
   padding: 12px;
 }.p-\[20px\]{
@@ -1837,8 +1862,8 @@ video {
   line-height: 2.25rem;
 }.text-\[11px\]{
   font-size: 11px;
-}.text-\[25px\]{
-  font-size: 25px;
+}.text-\[32px\]{
+  font-size: 32px;
 }.text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1858,6 +1883,8 @@ video {
   font-weight: 700;
 }.font-extralight{
   font-weight: 200;
+}.font-light{
+  font-weight: 300;
 }.font-medium{
   font-weight: 500;
 }.font-normal{
@@ -1872,8 +1899,6 @@ video {
   font-style: italic;
 }.leading-10{
   line-height: 2.5rem;
-}.leading-3{
-  line-height: .75rem;
 }.leading-4{
   line-height: 1rem;
 }.leading-5{
@@ -1892,6 +1917,8 @@ video {
   line-height: 10em;
 }.leading-\[22px\]{
   line-height: 22px;
+}.leading-\[25px\]{
+  line-height: 25px;
 }.leading-none{
   line-height: 1;
 }.leading-normal{
@@ -1900,8 +1927,6 @@ video {
   line-height: 1.25;
 }.tracking-tighter{
   letter-spacing: -0.05em;
-}.tracking-wide{
-  letter-spacing: 0.025em;
 }.text-\[\#2f3135\]{
   --tw-text-opacity: 1;
   color: rgb(47 49 53 / var(--tw-text-opacity));
