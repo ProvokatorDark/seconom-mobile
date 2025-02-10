@@ -2351,7 +2351,7 @@ select {
   opacity: 0.8;
   --tw-content: "";
   content: var(--tw-content);-o-border-image:linear-gradient(90deg, #dca5a5, #fff);border-image:linear-gradient(90deg, #dca5a5, #fff);border-image-slice:2;
-}[x-cloak]{display:none !important}.preloader-remove{opacity:0;z-index:-10}.btn-up_hide{display:none}.btn-up_hiding{opacity:0}[x-cloak]{display:none !important}@media (min-width: 1280px) {
+}[x-cloak]{display:none !important}.preloader-remove{opacity:0;z-index:-10}.btn-up_hide{display:none}.btn-up_hiding{opacity:0}[x-cloak]{display:none !important}#persone-once .form__error{color:red;text-align:left;font-size:12px;margin-top:3px;display:none}#persone-once input:valid:not(:-moz-placeholder-shown){border-color:green}#persone-once input:valid:not(:placeholder-shown){border-color:green}#persone-once input:invalid:not(:-moz-placeholder-shown){border-color:red}#persone-once input:invalid:not(:placeholder-shown){border-color:red}#persone-once input:invalid:not(:-moz-placeholder-shown)+.form__error{display:block}#persone-once input:invalid:not(:placeholder-shown)+.form__error{display:block}@media (min-width: 1280px) {
 
   .xl\:container {
     width: 100%;
