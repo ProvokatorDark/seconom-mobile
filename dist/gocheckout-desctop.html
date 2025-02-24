@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <script defer src="gocheckout-desctop.js"></script><link href="gocheckout-desctop.css" rel="stylesheet"></head>
+  <script defer src="gocheckout-desctop.js"></script><link href="src_scss_gocheckout-desctop_scss.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base" x-data="{isLeftMenu:false}">
     <header class="ns:px-1 sm:px-1 md:px-2 xl:px-3 2xl:px-3 2xl:container 2xl:mx-auto border-b-[1px] border-neutral-100">
       <div>
@@ -13351,7 +13351,7 @@
               <div class="relative mt-6" x-cloak x-show="!oblastSave">
                 <div class="pb-5">
                   <div>
-                    <button class="w-full h-[56px] bg-primary-700 hover:bg-primary-600 text-white text-lg  py-2 px-4 rounded-lg" @click="oblastSave=true,step=2"><span>Сохранить</span></button>
+                    <button class="w-full h-[56px] bg-primary-700 hover:bg-primary-600 text-white text-lg  py-2 px-4 rounded-lg" type="button" @click="oblastSave=true,step=2"><span>Сохранить</span></button>
                   </div>
                 </div>
               </div>
@@ -13534,7 +13534,7 @@
               </div>
             </div>
           </div>
-          <div class="w-full step-3" x-cloak x-show="step&gt;=3||validation">
+          <div class="w-full step-3" x-cloak x-show="step&gt;=3">
             <div class="pb-2">
               <p class="text-xl font-bold">Шаг 3. Выбор способа оплаты</p>
             </div>
@@ -13542,7 +13542,7 @@
               <form class="w-full ">
                 <fieldset class="space-y-6">
                   <div class="grid grid-cols-3 gap-6">
-                    <label class="h-[88px] relative flex flex-row items-center justify-start bg-white p-4 rounded-lg shadow-md cursor-pointer" @click="paymentClick('online'),paymentSave=true" for="payment-card">
+                    <label class="h-[88px] relative flex flex-row items-center justify-start bg-white p-4 rounded-lg shadow-md cursor-pointer" @click="paymentClick('online'),paymentSave=true,step=4" for="payment-card">
                       <div class="w-[87px] h-full shrink-0">
                         <div class="h-full bg-cover bg-[url('../assets/svg/gocheckout/generic-green.svg')]"></div>
                       </div>
@@ -13557,7 +13557,7 @@
                               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg></span></span></template>
                     </label>
-                    <label class="h-[88px] relative flex flex-row items-center justify-start bg-white p-4 rounded-lg shadow-md cursor-pointer" @click="paymentClick('sbp'),paymentSave=true" for="payment-qr">
+                    <label class="h-[88px] relative flex flex-row items-center justify-start bg-white p-4 rounded-lg shadow-md cursor-pointer" @click="paymentClick('sbp'),paymentSave=true,step=4" for="payment-qr">
                       <div class="w-[42px] h-[42px] shrink-0">
                         <div class="h-full bg-cover bg-[url('../assets/svg/gocheckout/sbp.svg')]"></div>
                       </div>
@@ -13572,7 +13572,7 @@
                               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg></span></span></template>
                     </label>
-                    <label class="h-[88px] relative flex flex-row items-center justify-start bg-white p-4 rounded-lg shadow-md cursor-pointer" @click="paymentClick('delivery'),paymentSave=true" for="payment-cash-delivery">
+                    <label class="h-[88px] relative flex flex-row items-center justify-start bg-white p-4 rounded-lg shadow-md cursor-pointer" @click="paymentClick('delivery'),paymentSave=true,step=4" for="payment-cash-delivery">
                       <div class="w-[87px] h-full shrink-0">
                         <div class="h-full bg-cover bg-[url('../assets/svg/gocheckout/generic.svg')]"></div>
                       </div>
@@ -13596,6 +13596,62 @@
               <div class="pb-5 flex justify-between">
                 <div><span x-text="deliveryMethod.payment"></span></div>
                 <div><a class="text-primary-700" @click="paymentSave=false,step=3" href="#">Изменить</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full step-4" x-cloak x-show="step&gt;=4">
+            <div class="pb-2">
+              <p class="text-xl font-bold">Шаг 4. Кому доставить</p>
+              <div class="mt-5">
+                <button class="w-[372px] h-[56px] inline-block rounded-lg border-2 border-primary-700  text-lg  text-primary-700 transition duration-150 ease-in-out hover:border-primary-800 hover:text-primary-800 hover:bg-primary-50 motion-reduce:transition-none" type="button" @click="modalPersonData=true,localOverlay=true">Заполнить</button>
+              </div>
+            </div>
+            <div class="modal fixed left-1/2 translate-x-[-50%] top-1/2 translate-y-[-50%] bg-white flex rounded-lg  z-[70] rounded-lg " x-cloak x-show="modalPersonData">
+              <div class="absolute top-0 -right-8 w-6 h-6 text-white pointer-events-auto cursor-pointer" @click="personDataSave=false,modalPersonData=false,localOverlay=false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
+                </svg>
+              </div>
+              <div class="modal person rounded-lg relative p-5">
+                <div class="customers relative h-full">
+                  <div class="h-full">
+                    <div class="flex flex-col justify-between items-center w-full h-full">
+                      <div class="w-full h-full flex flex-col ">
+                        <h1 class="text-xl font-bold text-center mb-6">Данные получателя</h1>
+                        <form class="flex flex-col w-full h-full justify-between" id="persone-once">
+                          <div class="flex flex-col gap-2">
+                            <div class="relative mt-5">
+                              <input class="peer px-0 placeholder-transparent h-10 w-full border-0 border-b-2 border-gray-300 appearance-none text-neutral-900 focus:outline-none focus:border-gray-600 focus:ring-0" id="m-name" name="m-name" pattern="^[А-Яа-яЁё\s]+$" type="text" placeholder="Имя" required="true"><span class="form__error">Это поле должно содержать имя написанное кириллицей</span>
+                              <label class="absolute left-0 -top-3.5 text-neutral-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-neutral-600 peer-focus:text-sm" for="m-name">Имя</label>
+                            </div>
+                            <div class="relative mt-5">
+                              <input class="peer px-0 placeholder-transparent h-10 w-full border-0 border-b-2 border-gray-300 appearance-none text-neutral-900 focus:outline-none focus:border-gray-600 focus:ring-0" id="m-surname" name="m-surname" pattern="^[А-Яа-яЁё\s]+$" type="text" placeholder="Фамилия" required="true"><span class="form__error">Это поле должно содержать фамилию написанную кириллицей</span>
+                              <label class="absolute left-0 -top-3.5 text-neutral-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-neutral-600 peer-focus:text-sm" for="m-surname">Фамилия</label>
+                            </div>
+                            <div class="relative mt-5">
+                              <input class="phonevalidation peer px-0 placeholder-transparent h-10 w-full border-0 border-b-2 border-gray-300 appearance-none text-neutral-900 focus:outline-none focus:border-gray-600 focus:ring-0" id="m-phone" name="m-phone" type="tel" autocomplete="tel" placeholder="Телефон" minlength="18" maxlength="18" required="true"><span class="form__error">Телефон в формате +7(900) 000-00-00</span>
+                              <label class="absolute left-0 -top-3.5 text-neutral-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-neutral-600 peer-focus:text-sm" for="m-phone">Телефон</label>
+                            </div>
+                            <div class="relative mt-5">
+                              <input class="peer px-0 placeholder-transparent h-10 w-full border-0 border-b-2 border-gray-300 appearance-none text-neutral-900 focus:outline-none focus:border-gray-600 focus:ring-0" id="m-email" name="m-email" type="email" placeholder="Email" required="true"><span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+                              <label class="absolute left-0 -top-3.5 text-neutral-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-neutral-600 peer-focus:text-sm" for="m-email">Email</label>
+                            </div>
+                          </div>
+                          <div class="w-full pt-12 pb-4 flex items-center justify-center">
+                            <button class="w-[368px] h-[56px] bg-primary-700 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-lg" type="submit"><span>Сохранить</span></button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative mt-6 w-[372px]" x-cloak x-show="personDataSave||validation">
+              <p class="text-gray-600">Способ оплаты</p>
+              <div class="pb-5 flex justify-between">
+                <div><span x-text="deliveryMethod.payment"></span></div>
+                <div><a class="text-primary-700" @click="personDataSave=false,step=4,localOverlay=true" href="#">Изменить</a></div>
               </div>
             </div>
           </div>
@@ -13664,13 +13720,13 @@
                 <div class="w-full flex flex-col gap-[8px]">
                   <template x-if="paymentSave||validation">
                     <div>
-                      <button class="w-full  min-w-[284px] h-[56px] bg-primary-700 hover:bg-primary-600 text-white rounded-lg text-lg">Подтвердить заказ</button>
+                      <button class="w-full  min-w-[284px] h-[56px] bg-primary-700 hover:bg-primary-600 text-white rounded-lg text-lg" type="button">Подтвердить заказ</button>
                       <div class="text-xs">Нажимая на кнопку "Подтвердить заказ", Вы принимаете условия<a class="ml-1 text-primary-700" href="#">Публичной оферты</a></div>
                     </div>
                   </template>
                   <template x-if="!paymentSave">
                     <div>
-                      <button class="w-full  min-w-[284px] h-[56px] bg-primary-700 text-white rounded-lg text-lg opacity-50 cursor-not-allowed" disabled="disabled">Подтвердить заказ</button>
+                      <button class="w-full  min-w-[284px] h-[56px] bg-primary-700 text-white rounded-lg text-lg opacity-50 cursor-not-allowed" type="button" disabled="disabled">Подтвердить заказ</button>
                       <div class="text-xs">Заполните карточку клиента</div>
                     </div>
                   </template>
@@ -13859,10 +13915,10 @@
           </div>
           <div class="pb-5 px-5">
             <div x-cloak x-show="statusMethodPoint&amp;&amp;deliveryMethod.isMethodPoint">
-              <button class="w-full h-[56px] bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" @click="modalMainClose(),deliverySave=true,step=3"><span>Заберу здесь</span></button>
+              <button class="w-full h-[56px] bg-primary-700 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-lg" type="button" @click="modalMainClose(),deliverySave=true,step=3"><span>Заберу здесь</span></button>
             </div>
             <div x-cloak x-show="statusMethodCourier&amp;&amp;deliveryMethod.isMethodCourier">
-              <button class="w-full h-[56px] bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" @click="modalMainClose(),deliverySave=true,step=3"><span>Привезти сюда</span></button>
+              <button class="w-full h-[56px] bg-primary-700 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-lg" type="button" @click="modalMainClose(),deliverySave=true,step=3"><span>Привезти сюда</span></button>
             </div>
           </div>
         </div>
@@ -13889,7 +13945,6 @@
     <script>
       let mainController = function () {
         return {
-      
           localOverlay: false,//Оверлей
           modalMain: false,//Модальное окно главное
           subFormDelivery:false,//Подформа ПВЗ
@@ -13899,8 +13954,11 @@
           oblastSave: false,//Сохранить выбор области
           deliverySave:false,//Сохранить способ доставки
           paymentSave: false,//Сохранить способ оплаты
+          personDataSave:false,//Сохранить личные данные получателя
+          modalPersonData:false,//Открыть модальное окно личных данных
           step:1,// Шаг
           validation:false,// Форма заполнена все провалидированно. вадидацию еще не прикрутил
+      
           regions: [
             {value: 262, name: 'Агинский бурятский округ'},
             {value: 187, name: 'Адыгея республика'},
@@ -13927,9 +13985,26 @@
               online:false,
               sbp:false,
               delivery:false
+            },
+          },
+          personalData: {
+            form: {
+              name: '',
+              surname: '',
+              phone: '',
+              email: '',
+            },
+            submitForm() {
+              if (this.statusValidation) {
+                this.personalDataSave = true,
+                  this.modalPerson = false,
+                  console.log('Submit')
+              } else {
+                return
+              }
+      
             }
           },
-      
           //Клик по Курьер
           onCourierDelivery() {
             this.deliveryMethod.sposob='Курьер'
@@ -13982,7 +14057,7 @@
             this.clearPayment()
             this.deliveryMethod.paymentMethod[arg] = true
             this.deliveryMethod.payment=this.paymentSwitcher(arg)
-            this.validation = true
+            // this.validation = true
           },
           clearPayment(){
             for (let key in this.deliveryMethod.paymentMethod) {
