@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script defer src="auxpage_vakansii.js"></script><link href="src_scss_auxpage_vakansii_scss.css" rel="stylesheet"></head>
+  <body class="bg-white text-neutral-600 work-sans leading-normal text-base" x-data="{isLeftMenu:false}">
+    <div class="flex flex-col min-h-screen">
+      <!--include ../molecules/menu-clean-->
+      <nav class="px-2 sm:px-4 md:px-6 xl:container xl:mx-auto" id="header">
+        <div class="w-full mx-auto flex flex-wrap items-center justify-between py-3">
+          <div class="logo "><a href="#">
+              <div class="h-[29px] w-[39px] pointer-events-none">
+                      <object type="image/svg+xml" width="39" height="29" data="f5bf6c8508492dd4ab87.svg"></object>
+              </div></a></div>
+          <div class="cabinet menu flex items-center">
+            <div class="focus-within:absolute focus-within:left-0 focus-within:top-0 focus-within:bg-white focus-within:z-10 focus-within:py-10 focus-within:w-full focus-within:flex focus-within:justify-center">
+              <div class="focus-within:w-3/4">
+                <form class="relative" action="">
+                  <input class="mr-4 peer relative z-10 h-8 w-8 rounded-full border border-transparent bg-transparent outline-none focus:w-full focus:cursor-text focus:border-primary-600 focus:pl-16 focus:pr-4" type="search">
+                        <svg class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent px-3.5 peer-focus:border-primary-700 peer-focus:stroke-primary-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                </form>
+              </div>
+            </div><a class="w-[22px] h-[22px] stroke-neutral-600">
+                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                      <path d="M17.894 6.945c3.969 0 7.197 3.228 7.197 7.197 0 0.022-0.003 0.045-0.004 0.067-0.003 0.053-0.007 0.106-0.008 0.16l-0.027 1.088 1.090 0.004c2.637 0.007 4.783 2.16 4.783 4.797 0 2.63-2.141 4.782-4.773 4.796l-0.233 0.001h-19.517c-2.937-0.003-5.327-2.394-5.327-5.33 0-2.275 1.448-4.3 3.603-5.040l0.6-0.205 0.106-0.625c0.261-1.542 1.586-2.661 3.149-2.661 0.498 0 0.98 0.116 1.431 0.343l0.972 0.488 0.469-0.981c1.192-2.491 3.739-4.1 6.488-4.1zM17.894 5.878c-3.288 0-6.12 1.925-7.45 4.705-0.575-0.29-1.223-0.456-1.911-0.456-2.111 0-3.859 1.536-4.2 3.55-2.514 0.862-4.324 3.24-4.324 6.048 0 3.531 2.862 6.393 6.392 6.396l19.756-0.001c3.225-0.017 5.834-2.634 5.834-5.862 0-3.233-2.615-5.854-5.846-5.863 0.002-0.085 0.012-0.168 0.012-0.253 0-4.564-3.7-8.263-8.263-8.263v0z" fill="current" stroke="current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></a><a class="w-[22px] h-[22px] ml-4">
+                    <svg class="fill-current hover:text-tertiary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <circle fill="none" cx="12" cy="7" r="3"></circle>
+                      <path d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z"></path>
+                    </svg></a><a class="top-menu ml-4 w-[25px] h-[19px]" x-on:click="isLeftMenu=true">
+                    <svg width="25" height="19" viewbox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <rect width="25" height="19" fill="url(#pattern0_3726_6)"></rect>
+                      <defs>
+                        <pattern id="pattern0_3726_6" patterncontentunits="objectBoundingBox" width="1" height="1">
+                          <use xlink:href="#image0_3726_6" transform="matrix(0.00242718 0 0 0.00317401 0 -0.0157767)"></use>
+                        </pattern>
+                        <image id="image0_3726_6" width="412" height="325" xlink:href="data:image/png;base64,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"></image>
+                      </defs>
+                    </svg></a>
+          </div>
+        </div>
+      </nav>
+      <div class="preloader flex items-center justify-center fixed bg-neutral-100 top-0 left-0 w-full h-screen duration-700 opacity-100 z-50">
+        <div class="w-16 h-16 border-b-2 border-black rounded-full animate-spin"></div>
+      </div>
+      <section class="w-full" id="middle">
+        <div class="left-menu fixed flex w-full h-screen overflow-y-auto overscroll-contain bg-secondary pt-16 top-0 left-0 flex-col -translate-x-full ease-linear duration-150 z-40" :class="isLeftMenu ? 'translate-x-0' : '-translate-x-full'">
+          <button class="close close-menu absolute top-5 left-5" x-on:click="isLeftMenu=false" type="button" aria-label="Close"><span class="fa fa-times text-xl text-gray-700" aria-hidden="true"></span></button>
+          <div class="left-0 top-0 bg-white py-4 w-full flex justify-center border-t-2 border-gray-300">
+            <div class="w-3/4">
+              <form class="relative" action="">
+                <input class="peer relative z-10 h-8 rounded-full border-t bg-transparent outline-none w-full cursor-text border-primary-700 pl-16 pr-4" type="search">
+                      <svg class="absolute inset-y-0 my-auto h-8 w-12 border-r  px-3.5 border-primary-700 stroke-primary-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                      </svg>
+              </form>
+            </div>
+          </div>
+          <ul class="aside-menu w-full">
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/promotions/"><span class="level-1">Акции</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <ul class="aside-dd-menu" x-cloak x-show="isOpen">
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/new7/"><span class="level-2">Новинки недели</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/new30/"><span class="level-2">Новинки месяца</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/bolshie-razmery/"><span class="level-2">Большие размеры</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/premium/"><span class="level-2">Сток</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/fix100/"><span class="level-2">Fix 100</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/fix80/"><span class="level-2">Fix 80</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/fix50/"><span class="level-2">Fix 50</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/fix30/"><span class="level-2">Fix 30</span></a></div>
+                </li>
+              </ul>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/zhenskaja-odezhda"><span class="level-1">Для женщин</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <ul class="aside-dd-menu" x-cloak x-show="isOpen">
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/tolstovki_3i/"><span class="level-2">Толстовки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/kofty-tolstovki/"><span class="level-2">Кофты</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/bezrukavki_ta/"><span class="level-2">Жилеты и безрукавки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/zhakety_nn/"><span class="level-2">Жакеты</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/pidzhaki-zhilety/"><span class="level-2">Пиджаки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/dzhinsovki_zg/"><span class="level-2">Джинсовки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/tuniki/"><span class="level-2">Туники</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/rubashki-bluzki/"><span class="level-2">Блузки, рубашки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/futbolki_wi/"><span class="level-2">Футболки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/majki_kx/"><span class="level-2">Майки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/topy_q7/"><span class="level-2">Топы</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/platja_hl/"><span class="level-2">Платья</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/sarafany/"><span class="level-2">Сарафаны</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/kombinezony/"><span class="level-2">Комбинезоны, костюмы</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/jubki/"><span class="level-2">Юбки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/dzhinsy-shtany/"><span class="level-2">Брюки</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/dzhinsy_1a/"><span class="level-2">Джинсы</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/legginsy_d7/"><span class="level-2">Леггинсы</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/bridzhi_xa/"><span class="level-2">Бриджи, капри</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/shorty-bridzhi_sv/"><span class="level-2">Шорты</span></a></div>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/kupalniki-zhenskie/"><span class="level-2">Купальники</span></a></div>
+                </li>
+                <li class="aside-menu-open-item  menu-level2 pl-[20px] flex flex-col border-t-[1px] border-gray-100 " x-data="{ isOpens: false }">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/kolgotki-noski-golfy/"><span class="level-2">Колготки, носки, гольфы</span></a>
+                    <div class="px-[15px] text-gray-700 bg-white z-10">
+                      <div class="transition" x-on:click="isOpens = !isOpens" :class="{ '-rotate-180': isOpens }">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="aside-dd-menu" x-cloak x-show="isOpens">
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/vetrovki_xo/"><span>Ветровки</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/zhilety_1t/"><span>Жилеты</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/kurtki_zhenskie/"><span>Куртки</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/palto_mk/"><span>Пальто</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/plashi_fr/"><span>Плащи</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/dublenki_bu/"><span>Шубы, дубленки</span></a></li>
+                  </ul>
+                </li>
+                <li class="pl-[20px] border-t-[1px] border-gray-100 items-center">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/dlja-budushih-mam_rj/"><span class="level-2">Для будущих мам</span></a></div>
+                </li>
+                <li class="aside-menu-open-item  menu-level2 pl-[20px] flex flex-col border-t-[1px] border-gray-100 " x-data="{ isOpens: false }">
+                  <div class="flex flex-row justify-between items-center h-10"><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-medium" href="/category/kurtkivetrovkipalto/"><span class="level-2">Верхняя одежда</span></a>
+                    <div class="px-[15px] text-gray-700 bg-white z-10">
+                      <div class="transition" x-on:click="isOpens = !isOpens" :class="{ '-rotate-180': isOpens }">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="aside-dd-menu" x-cloak x-show="isOpens">
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/vetrovki_xo/"><span>Ветровки</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/zhilety_1t/"><span>Жилеты</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/kurtki_zhenskie/"><span>Куртки</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/palto_mk/"><span>Пальто</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/plashi_fr/"><span>Плащи</span></a></li>
+                    <li class="menu-level3 pl-[20px] border-t-[1px] border-gray-100 "><a class="relative text-primary-700 pl-[10px] py-[3px] block text-lg font-normal" href="/category/dublenki_bu/"><span>Шубы, дубленки</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/muzhskaja-odezhda/"><span class="level-1">Для мужчин</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/detskaja-odezhda/"><span class="level-1">Для детей</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="category/igrushki/"><span class="level-1">Игрушки</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/sport_ls/"><span class="level-1">Спорт</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/domashnij-tekstil/"><span class="level-1">Дом и дача</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/sumki/"><span class="level-1">Сумки</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/aksessuary/"><span class="level-1">Аксессуары</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/obuv/"><span class="level-1">Обувь</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/rasprodazha/"><span class="level-1">Распродажа</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/optom_tq/"><span class="level-1">Оптом</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col border-t-2 border-gray-300 last:border-b-2 text-primary-700 " x-data="{ isOpen: false }">
+              <div class="flex flex-row justify-between items-center h-12"><a class="relative text-primary-700 pl-[20px] py-[3px] block text-lg font-semibold w-full" href="/category/brands/"><span class="level-1">Бренды</span></a>
+                <div class="px-[15px] text-gray-700 bg-white z-10">
+                  <div class="transition" x-on:click="isOpen = !isOpen" :class="{ '-rotate-180': isOpen }">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="mx-auto container ">
+        <div class="flex items-center">
+          <nav class="bg-white py-3 w-full">
+            <ol class="list-reset flex">
+              <li class="text-sm lg:text-xl"><a class="text-primary-700" href="#">Сэконом</a><span class="text-gray-500 mx-2">/</span>
+              </li>
+              <li class="text-sm lg:text-xl"><a class="text-gray-500" href="#">Вакансии</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="py-2 border-t-2">
+          <h1 class="text-xl font-semibold lg:text-3xl">Вакансии магазина "Сэконом"</h1>
+        </div>
+        <div class="lg:text-xl">
+          <div class="py-2">
+            <h2 class="text-xl font-semibold lg:text-2xl">Оператор ПК (1С)</h2>
+            <div class="relative w-full py-3"><img class="w-full lg:max-w-2xl" src="ed17fdc35b1d0420fc75.jpg"></div>
+            <p class="mt-1">Екатеринбург, Бархотская, 2</p>
+            <p>Требуемый опыт работы: не требуется</p>
+            <p>Занятость: полный день</p>
+            <p class="mt-1">Обязанности:</p>
+            <ul class="list-disc list-inside">
+              <li>Оператор Пк-описание карточек товара одежды для интернет-магазина в 1С</li>
+            </ul>
+            <p class="mt-1">Требования:</p>
+            <ul class="list-disc list-inside">
+              <li>Знание компьютера на уровне пользователя</li>
+              <li>Хорошая скорость печати</li>
+              <li>Внимательность, усидчивость, аккуратность</li>
+            </ul>
+            <p class="mt-1">Условия:</p>
+            <ul class="list-disc list-inside">
+              <li>Официальное оформление в соответствии с ТК РФ</li>
+              <li>График работы: 5/2 с 9 до 18 часов</li>
+              <li>Корпоративные скидки сотрудникам на товары Компании</li>
+            </ul>
+          </div>
+          <div class=" py-2 border-t-2">
+            <h2 class="text-xl font-semibold lg:text-2xl">Фотограф</h2>
+            <div class="relative w-full py-3"><img class="w-full lg:max-w-2xl" src="00bb0599af8d4b6f5d44.jpg"></div>
+            <p class="mt-1">Екатеринбург, Бархотская, 2</p>
+            <p>Требуемый опыт работы: не требуется</p>
+            <p>Занятость: полный день</p>
+            <p class="mt-1">Обязанности:</p>
+            <ul class="list-disc list-inside">
+              <li>Предметная фотосъемка товара компании</li>
+              <li>Обработка фотографий для размещения в каталогах и на сайте компании</li>
+            </ul>
+            <p class="mt-1">Требования:</p>
+            <ul class="list-disc list-inside">
+              <li>Опыт работы с зеркальной камерой и импульсным светом</li>
+              <li>Быстрота работы, аккуратность в обработке фотографий</li>
+              <li>Уверенное владение Photoshop</li>
+              <li>Опыт студийной съемки</li>
+            </ul>
+            <p class="mt-1">Условия:</p>
+            <ul class="list-disc list-inside">
+              <li>Оборудованная фотостудия</li>
+              <li>Перспектива роста и развития как профессионала вместе с нами</li>
+              <li>Дружный молодой коллектив</li>
+              <li>Корпоративные скидки сотрудникам на товары Компании</li>
+            </ul>
+          </div>
+          <div class=" py-2 border-t-2">
+            <h2 class="text-xl font-semibold my-3 lg:text-2xl">Наши контакты:</h2>
+            <p class="flex items-center justify-start mb-4">
+              <svg class="w-4 mr-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+              </svg>8 (800) 505-02-39 по РФ бесплатный
+            </p>
+            <p class="flex items-center justify-start mb-4">
+              <svg class="w-4 mr-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+              </svg>8 (953) 000-01-21 мобильный
+            </p>
+          </div>
+        </div>
+      </div>
+            <div class="btn-up btn-up_hide fixed bg-primary-700 left-5 bottom-12 rounded-[22px]
+    w-11 h-11 z-40 transition-opacity duration-500
+    before:content-[''] before:text-center before:absolute before:w-5 before:h-5 before:left-3
+    before:top-3 before:bg-transparent before:bg-no-repeat before:bg-center before:bg-[length:100%_100%]
+    before:bg-btn-image"></div>
+      <footer class="text-center bg-gray-100 text-gray-600 border-t border-gray-300 mt-8 w-full ">
+        <div class="ns:px-1 sm:px-1 md:px-2 xl:px-3 2xl:px-3 2xl:container 2xl:mx-auto">
+          <div>
+            <div class="py-10 text-left md:text-left">
+              <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                  <h6 class="uppercase font-semibold mb-4 flex justify-start md:justify-start">Контакты</h6>
+                        <p class="flex items-center justify-start mb-4">
+                          <svg class="w-4 mr-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+                          </svg>г. Екатеринбург, ул. Бархотская 2
+                        </p>
+                        <p class="flex items-center justify-start mb-4">
+                          <svg class="w-4 mr-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                          </svg><a href="mailto:mail@seconom24.ru">mail@seconom24.ru</a>
+                        </p>
+                        <p class="flex items-center justify-start mb-4">
+                          <svg class="w-4 mr-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+                          </svg><a href="tel:+78005050239">8(800) 505-02-39 по РФ бесплатный</a>
+                        </p>
+                        <p class="flex items-center justify-start mb-4">
+                          <svg class="w-4 mr-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+                          </svg><a href="tel:+789530000121">8(953) 000-01-21 мобильный</a>
+                        </p>
+                </div>
+                <div>
+                  <h6 class="uppercase font-semibold mb-4 flex justify-start md:justify-start">Обработка заказов</h6>
+                  <div class="flex flex-col">
+                    <p class="mb-4">Пн - Пт с 07:00 до 16:00 MSK</p>
+                    <p class="mb-4">Сб и Вс - выходные дни</p>
+                  </div>
+                </div>
+                <div x-data="{ isOpen: false }">
+                  <h6 class="uppercase font-semibold mb-4 flex justify-start md:justify-start cursor-pointer" @click="isOpen=!isOpen">Сэконом</h6>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Сэконом</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Вакансии</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Контакты</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Скидки и акции</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Преимущества</a></p>
+                        </div>
+                </div>
+                <div x-data="{ isOpen: false }">
+                  <h6 class="uppercase font-semibold mb-4 flex justify-start md:justify-start cursor-pointer" x-on:click="isOpen=!isOpen">Сервис и помощь</h6>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Как сделать заказ</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Доставка почтой</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Способы оплаты</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Правила продажи</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Публичная оферта</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Конфиденциальность</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Регистрация</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Таблица размеров</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Уход за обувью и одеждой</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Возврат товара</a></p>
+                        </div>
+                        <div x-cloak x-show="isOpen">
+                          <p class="mb-4 md:block"><a class="text-gray-600" href="!#">Помощь</a></p>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center py-6 bg-gray-200 mb-12 w-full"><span>© 2023 Copyright:</span>
+          <div class="text-gray-600 font-semibold uppercase">Seconom</div>
+        </div>
+      </footer>
+      <aside class="fixed inset-x-0 bottom-0 z-30 bg-white leading-[10em] h-12 border-t-[1px] border-gray-200 lg:h-16" id="footer-pane">
+        <div class="flex justify-evenly items-center"><a class="inline-block no-underline flex flex-col" href="!#"><span class="text-xs tracking-tighter lg:text-base">Подписки</span>
+            <div class="relative flex justify-center w-7 h-7 self-center"><img src="219e13ef7a8f70be5a08.svg"><span class="absolute top-0 right-0 inline-flex w-4 h-4 justify-center rounded-full bg-green-700 text-xs text-white">7</span></div></a><a class="inline-block no-underline flex flex-col" href="!#"><span class="text-xs tracking-tighter lg:text-base">Поиски</span>
+            <div class="relative flex justify-center w-7 h-7 self-center stroke-sky-700">
+                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                      <path d="M17.894 6.945c3.969 0 7.197 3.228 7.197 7.197 0 0.022-0.003 0.045-0.004 0.067-0.003 0.053-0.007 0.106-0.008 0.16l-0.027 1.088 1.090 0.004c2.637 0.007 4.783 2.16 4.783 4.797 0 2.63-2.141 4.782-4.773 4.796l-0.233 0.001h-19.517c-2.937-0.003-5.327-2.394-5.327-5.33 0-2.275 1.448-4.3 3.603-5.040l0.6-0.205 0.106-0.625c0.261-1.542 1.586-2.661 3.149-2.661 0.498 0 0.98 0.116 1.431 0.343l0.972 0.488 0.469-0.981c1.192-2.491 3.739-4.1 6.488-4.1zM17.894 5.878c-3.288 0-6.12 1.925-7.45 4.705-0.575-0.29-1.223-0.456-1.911-0.456-2.111 0-3.859 1.536-4.2 3.55-2.514 0.862-4.324 3.24-4.324 6.048 0 3.531 2.862 6.393 6.392 6.396l19.756-0.001c3.225-0.017 5.834-2.634 5.834-5.862 0-3.233-2.615-5.854-5.846-5.863 0.002-0.085 0.012-0.168 0.012-0.253 0-4.564-3.7-8.263-8.263-8.263v0z" fill="current" stroke="current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+            </div></a><a class="inline-block no-underline flex flex-col" href="!#"><span class="text-xs tracking-tighter lg:text-base">Избранное</span>
+            <div class="relative flex justify-center w-7 h-7 self-center"><img src="983a1b52eee8d95f2545.svg"></div></a><a class="inline-block no-underline flex flex-col" href="!#"><span class="text-xs tracking-tighter lg:text-base">Корзина</span>
+            <div class="relative flex justify-center w-7 h-7 self-center"><img src="579648f17f153daddc35.svg"><span class="absolute top-0 right-0 inline-flex w-4 h-4 justify-center rounded-full bg-green-700 text-xs text-white">10</span></div></a></div>
+      </aside><!-- Validate Plugin -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/autoComplete.min.js"></script>
+      <script type="text/javascript" defer src="https://cdn.jsdelivr.net/npm/@colinaut/alpinejs-plugin-simple-validate@latest/dist/alpine.validate.min.js"></script>
+      <script type="text/javascript" async defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.8/cdn.min.js"></script>
+    </div>
+  </body>
+</html>
