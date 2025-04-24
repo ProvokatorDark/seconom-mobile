@@ -13920,36 +13920,38 @@
           </div>
         </div>
       </div>
-      <div class="modal fixed left-1/2 translate-x-[-50%] top-1/2 translate-y-[-50%] bg-white flex flex-col items-center rounded-lg w-[650px] h-[300px] z-[70] rounded-lg " x-cloak x-show="oblastModal">
+      <div class="modal fixed left-1/2 translate-x-[-50%] top-1/2 translate-y-[-50%] bg-white flex rounded-lg w-[650px] h-[500px] z-[70] rounded-lg " x-cloak x-show="oblastModal">
         <div class="absolute top-0 -right-8 w-6 h-6 text-white pointer-events-auto cursor-pointer" @click="oblastModal=false,localOverlay=false">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
             <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
           </svg>
         </div>
-        <div class="left w-[460px] h-full flex flex-col" x-data="mestoComponent" x-init="$watch('$store.fid', (value,oldValue) =&gt; console.log('value',value,'oldValue',oldValue))">
-          <div class="ml-5 mt-6 h-10 flex items-center" x-init="areaStart">
-            <input x-show="!$store.fid" id="area" type="text" tabindex="0" :fid="$store.fid">
-            <div class="relative w-full" x-show="$store.fid">
-              <div class="areaSelection font-bold"></div>
-              <div class="absolute top-0 right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearArea">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
-                  <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
-                </svg>
+        <div class="left w-[470px] h-full flex flex-col justify-between" x-data="mestoComponent" x-init="$watch('$store.fid', (value,oldValue) =&gt; console.log('value',value,'oldValue',oldValue))">
+          <div>
+            <div class="ml-5 mt-6 h-10 flex items-center" x-init="areaStart">
+              <input x-show="!$store.fid" id="area" type="text" tabindex="0" :fid="$store.fid">
+              <div class="relative w-full" x-show="$store.fid">
+                <div class="areaSelection font-bold"></div>
+                <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearArea">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                    <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="ml-5 mt-6 h-10 flex items-center" x-init="townStart">
+              <input x-show="!$store.fitown&amp;&amp;$store.fid" id="town" type="text" tabindex="2">
+              <div class="relative w-full" x-show="$store.fitown">
+                <div class="townSelection font-bold"></div>
+                <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearTown">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                    <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
-          <div class="ml-5 mt-6 h-10 flex items-center" x-init="townStart">
-            <input x-show="!$store.fitown&amp;&amp;$store.fid" id="town" type="text" tabindex="2">
-            <div class="relative w-full" x-show="$store.fitown">
-              <div class="townSelection font-bold"></div>
-              <div class="absolute top-0 right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearTown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
-                  <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="w-full mt-24 flex items-center justify-center" x-show="$store.fitown">
+          <div class="w-full pb-12 flex items-center justify-center" x-show="$store.fitown">
             <button class="w-[368px] h-[56px] bg-primary-700 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-lg" type="submit"><span>Сохранить</span></button>
           </div>
         </div>
@@ -14348,21 +14350,21 @@
             areaElement.init()
             document.getElementById("area").focus()
             // Create a KeyboardEvent object for the "a" key
-            // const event = new KeyboardEvent("keypress", {
-            //   key: "Tab",
-            //   code: "Tab",
-            //   // charCode: 97, // ASCII code for 'a'
-            //   keyCode: 9   // Deprecated but included for compatibility
-            // });
+            const event = new KeyboardEvent("keypress", {
+              key: "Tab",
+              code: "Tab",
+              // charCode: 97, // ASCII code for 'a'
+              keyCode: 9   // Deprecated but included for compatibility
+            });
       
             // Dispatch the event to the window
-            // window.dispatchEvent(event);
-            //
-            // window.addEventListener('keypress', (e) => {
-            //   if (e.key === 'Tab') {
-            //     console.log(e);
-            //   }
-            // });
+            window.dispatchEvent(event);
+      
+            window.addEventListener('keypress', (e) => {
+              if (e.key === 'Tab') {
+                console.log(e);
+              }
+            });
       
           },
           clearTown() {
@@ -14372,6 +14374,7 @@
             townElement.unInit();
             townElement.init()
           }
+      
         }))
       })
     </script>
