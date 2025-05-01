@@ -492,9 +492,38 @@
               <div class="h-8" @click="modalCity = false;">
                 <div class="absolute right-3 top-1"><i class="fa fa-times text-2xl text-neutral-400" aria-hidden="true"></i></div>
               </div>
-              <div class="flex flex-col justify-center items-center w-full h-full gap-4">
+              <div class="flex flex-col  items-center w-full h-full gap-4">
                 <h1 class="text-xl font-bold">Населенный пункт</h1>
-                <div class="flex flex-col justify-center items-center w-full gap-4 h-full">
+                <div class="flex flex-col gap-10 w-[88%]">
+                  <div class="item" x-init="areaStart">
+                    <input x-show="!$store.newFid" id="area" type="text" tabindex="0" :fid="$store.newFid">
+                    <div class="relative w-full" x-show="$store.newFid">
+                      <div class="areaSelection font-bold"></div>
+                      <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearArea">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                          <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div x-init="townStart">
+                    <input x-show="!$store.newFitown&amp;&amp;$store.newFid" id="town" type="text" tabindex="2">
+                    <div class="relative w-full" x-show="$store.newFitown">
+                      <div class="townSelection font-bold"></div>
+                      <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearTown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                          <path fill="currentColor" d="M10.584 12 4.707 6.123a1.001 1.001 0 0 1 1.416-1.416L12 10.584l5.877-5.877a1.001 1.001 0 0 1 1.416 1.416L13.416 12l5.877 5.877a1.001 1.001 0 0 1-1.416 1.416L12 13.416l-5.876 5.877a1.001 1.001 0 0 1-1.416-1.416z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="save pb-10 w-[60%]" x-show="$store.newFitown">
+                  <button class="bg-primary-700 w-full rounded-lg" @click="">
+                    <div class="p-3 text-white">Сохранить</div>
+                  </button>
+                </div>
+                <div class="flex flex-col justify-center items-center w-full gap-4 h-full hidden">
                   <div class="w-full h-full">
                     <div class="flex flex-col justify-between h-full">
                       <div>
@@ -931,6 +960,7 @@
             paymentSave: false,
             validation:false,
         
+            inputValue:false,
         
             oblast: 'Выберите населенный пункт',//Выбор области
         
@@ -943,7 +973,6 @@
               {value: 262, name: 'г. Екатеринбург - Агинский бурятский округ'},
               {value: 187, name: 'г. Екатеринбург - Адыгея республика'},
             ],
-        
             deliveryMethod: {
               sposob: 'Пункт выдачи',
               company: '',
@@ -1103,8 +1132,239 @@
             },
         
         
+            areaFid:false,
+            areaStart() {
+              console.log('areaStart')
+              areaElement = new autoComplete({
+                selector: "#area",
+                data: {
+                  src: async (query) => {
+                    try {
+                      // Loading placeholder text
+                      document
+                        .getElementById("area")
+                        .setAttribute("placeholder", "Loading...");
+                      // Fetch External Data Source
+                      const source = await fetch(
+                        "https://seconom24.ru/preorder/?action=setRegion&test=1&query=" + query
+                      );
+                      const data = await source.json();
+                      // console.log(data);
+                      // Post Loading placeholder text
+                      document
+                        .getElementById("area")
+                        .setAttribute("placeholder", areaElement.placeHolder);
+                      // Returns Fetched data
+                      return data;
+                    } catch (error) {
+                      return error;
+                    }
+                  },
+                  keys: ["value"],
+                  cache: false,
+                  filter: (list) => {
+                    // Filter duplicates
+                    // incase of multiple data keys usage
+                    const filteredResults = Array.from(
+                      new Set(list.map((value) => value.match))
+                    ).map((name) => {
+                      return list.find((value) => value.match === name);
+                    });
+        
+                    return filteredResults;
+                  },
+                  wrapper: false,
+                },
+                placeHolder: "Поиск области...",
+                threshold: 3,
+                resultsList: {
+                  element: (list, data) => {
+                    const info = document.createElement("p");
+                    if (data.results.length > 0) {
+                      info.innerHTML = ``;
+                    } else {
+                      info.innerHTML = `Не найдено`;
+                    }
+                    list.prepend(info);
+                  },
+                  noResults: true,
+                  maxResults: 15,
+                  tabSelect: true
+                },
+                resultItem: {
+                  element: (item, data) => {
+                    // Modify Results Item Style
+                    item.style = "display: flex; justify-content: space-between;";
+                    // Modify Results Item Content
+                    item.innerHTML = `
+                                         <span style="text-overflow: ellipsis; white-space: normal; overflow: hidden;">
+                                           ${data.match}
+                                         </span>
+                                         `;
+                  },
+                  highlight: true
+                },
+                events: {
+                  input: {
+                    focus: () => {
+                      if (areaElement.input.value.length) areaElement.start();
+                    }
+                  }
+                }
+              });
+        
+              document.getElementById("area").addEventListener("selection", function (event) {
+                // let area = document.getElementById('area')
+                const feedback = event.detail;
+                areaElement.input.blur();
+                // Prepare User's Selected Value
+                const selection = feedback.selection.value[feedback.selection.key];
+                const selection2 = feedback.selection.value['id'];
+                this.fiatId = selection2;
+                console.log('fiatId', this.fiatId)
+                // window.Alpine.store('fid', this.fiatId)
+                Alpine.store('newFid',this.fiatId)
+        
+                this.areaFid = this.fiatId
+        
+        
+                // Render selected choice to selection div
+                document.querySelector(".areaSelection").innerHTML = selection;
+                // Replace Input value with the selected value
+                areaElement.input.value = selection;
+                // Console log autoComplete data feedback
+                console.log(feedback);
+                // console.log('$store.fid', Alpine.store('fid'))
+              });
+            },
+            townStart() {
+              townElement = new autoComplete({
+                selector: "#town",
+                data: {
+                  src: async (query) => {
+                    try {
+                      // Loading placeholder text
+                      document
+                        .getElementById("town")
+                        .setAttribute("placeholder", "Loading...");
+                      // Fetch External Data Source
+                      // console.log('fiatId', this.fiatId)
+        
+                      const query2 = Alpine.store('newFid')
+                      console.log('query2', query2)
+        
+                      const source = await fetch(
+                        "https://seconom24.ru/preorder/?action=setCity&query=" + query + "&id=" + query2
+                      );
+                      const data = await source.json();
+                      // console.log(isObject(data));
+                      // Post Loading placeholder text
+                      document
+                        .getElementById("town")
+                        .setAttribute("placeholder", townElement.placeHolder);
+                      // Returns Fetched data
+                      return data;
+                    } catch (error) {
+                      return error;
+                    }
+                  },
+                  keys: ["value"],
+                  cache: false,
+                  filter: (list) => {
+                    // Filter duplicates
+                    // incase of multiple data keys usage
+                    const filteredResults = Array.from(
+                      new Set(list.map((value) => value.match))
+                    ).map((name) => {
+                      return list.find((value) => value.match === name);
+                    });
+        
+                    return filteredResults;
+                  },
+                  wrapper: false,
+                },
+                placeHolder: "Поиск города...",
+                threshold: 3,
+                resultsList: {
+                  element: (list, data) => {
+                    const info = document.createElement("p");
+                    if (data.results.length > 0) {
+                      info.innerHTML = ``;
+                    } else {
+                      info.innerHTML = `Не найдено`;
+                    }
+                    list.prepend(info);
+                  },
+                  noResults: true,
+                  maxResults: 15,
+                  tabSelect: true
+                },
+                resultItem: {
+                  element: (item, data) => {
+                    // Modify Results Item Style
+                    item.style = "display: flex; justify-content: space-between;";
+                    // Modify Results Item Content
+                    item.innerHTML = `
+                                          <span style="text-overflow: ellipsis; white-space: normal; overflow: hidden;">
+                                            ${data.match}
+                                          </span>
+                                          `;
+                  },
+                  highlight: true
+                },
+                events: {
+                  input: {
+                    focus: () => {
+                      if (townElement.input.value.length) townElement.start();
+                    }
+                  }
+                }
+              });
+              document.getElementById("town").addEventListener("selection", function (event) {
+                const feedback = event.detail;
+                townElement.input.blur();
+                // Prepare User's Selected Value
+                const selection = feedback.selection.value.value;
+                // console.log(selection)
+                Alpine.store('newFitown', true)
+                // this.$store.newFitown = true
+        
+                // Render selected choice to selection div
+                document.querySelector(".townSelection").innerHTML = selection;
+                // Replace Input value with the selected value
+                townElement.input.value = selection;
+                // Console log autoComplete data feedback
+                // console.log(feedback);
+              });
+            },
+            clearArea() {
+              this.clearTown();
+              Alpine.store('newFid',false)
+              document.getElementById("area").value = ""
+              areaElement.close()
+              areaElement.unInit();
+              areaElement.init()
+              const timerArea = setTimeout(() => {
+                document.getElementById("area").focus()
+              }, 0)
+            },
+            clearTown() {
+              Alpine.store('newFitown',false)
+              document.getElementById("town").value = ""
+              townElement.close()
+              townElement.unInit();
+              townElement.init()
+              const timerTown = setTimeout(() => {
+                document.getElementById("town").focus()
+              }, 0)
+            },
+        
           }
         }
+        document.addEventListener('alpine:init', () => {
+          Alpine.store('newFid', false);
+          Alpine.store('newFitown', false);
+        });
       </script>
             <div class="btn-up btn-up_hide fixed bg-primary-700 left-5 bottom-12 rounded-[22px]
     w-11 h-11 z-40 transition-opacity duration-500
