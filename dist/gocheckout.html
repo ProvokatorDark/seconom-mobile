@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <script defer src="gocheckout.js"></script><link href="gocheckout.css" rel="stylesheet"></head>
+  <script defer src="gocheckout.js"></script><link href="src_scss_gocheckout_scss.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base" x-data="{isLeftMenu:false}">
     <div class="flex flex-col min-h-screen">
       <!--include ../molecules/menu-clean-->
@@ -340,12 +340,12 @@
           </ul>
         </div>
       </section>
-      <main class="ns:px-2 sm:px-4 md:px-6 xl:container xl:mx-auto flex-1" x-data="appController()">
+      <main class="ns:px-2 sm:px-4 md:px-6 xl:container xl:mx-auto flex-1" x-init="getInformation" x-data="appController()">
         <div class="flex flex-col text-gray-700 text-sm border-solid border-y-[0.5px] border-[rgb(204 214 228 / 60%)">
           <div class="h-[50px]">
             <div class="h-[50px]">
               <div class="h-[50px] flex justify-between items-center "><i class="text-lg fa-solid fa-city " :class="oblastSave ? 'text-green-600':'text-red-600'"></i>
-                <div class="flex justify-between items-center w-full ml-3"><span x-text="oblast"></span>
+                <div class="flex justify-between items-center w-full ml-3"><span x-text="confirmOrder.customerData.full_address"></span>
                   <div class="h-6 w-6" @click="modalCity = true;">
                     <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                       <path stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
@@ -415,27 +415,27 @@
                   <div class="text-xl text-black font-bold mb-3">Ваш заказ</div>
                   <div class="flex text-neutral-700 mb-3 ">
                     <div class="w-1/2 text-left"><span>Количество товаров:</span></div>
-                    <div class="w-1/2 text-right"><span>38</span></div>
+                    <div class="w-1/2 text-right"><span x-text="confirmOrder.cart.count"></span></div>
                   </div>
                   <div class="flex text-neutral-700 mb-3">
                     <div class="w-1/2 text-left"><span>Сумма заказа:</span></div>
-                    <div class="w-1/2 text-right"><span>2 610 ₽</span></div>
+                    <div class="w-1/2 text-right"><span x-text="reFormat(confirmOrder.cart.amount)"></span><span class="ml-1">₽</span></div>
                   </div>
                   <div class="flex text-neutral-700 mb-3">
                     <div class="w-1/2 text-left"><span>Вес товаров:</span></div>
-                    <div class="w-1/2 text-right"><span>1.088 кг.</span></div>
+                    <div class="w-1/2 text-right"><span x-text="confirmOrder.cart.weight"></span><span class="ml-1">кг.</span></div>
                   </div>
                   <div class="flex text-neutral-700 mb-3">
                     <div class="w-1/2 text-left"><span>Вес упаковки</span></div>
-                    <div class="w-1/2 text-right"><span>0.25 кг.</span></div>
+                    <div class="w-1/2 text-right"><span x-text="confirmOrder.cart.weight_pack"></span><span class="ml-1">кг.</span></div>
                   </div>
                   <div class="flex text-neutral-700 mb-3">
                     <div class="w-1/2 text-left"><span>Вы сэкономили:</span></div>
-                    <div class="w-1/2 text-right"><span class="font-bold text-green-600">302 ₽</span></div>
+                    <div class="w-1/2 text-right"><span class="font-bold text-green-600" x-text="reFormat(confirmOrder.cart.saved)"></span><span class="ml-1 font-bold text-green-600">₽</span></div>
                   </div>
                   <div class="flex border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%)] text-xl text-black font-bold">
                     <div class="py-[12px] w-1/2 text-left"><span>Итого:</span></div>
-                    <div class="py-[12px] w-1/2 text-right"><span>2 610 ₽</span></div>
+                    <div class="py-[12px] w-1/2 text-right"><span x-text="reFormat(confirmOrder.orderData.total)">2 610 ₽</span><span class="ml-1">₽</span></div>
                   </div>
                   <div class="flex border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%)] text-neutral-700">
                     <div class="w-full flex flex-row justify-between py-[12px] text-lg">
@@ -446,14 +446,14 @@
                       <div class="flex">
                         <div>
                           <label class="inline-flex items-center me-5 cursor-pointer">
-                            <input class="peer sr-only" type="checkbox" id="checkbox" x-model="personalAccount" value="">
+                            <input class="peer sr-only" @click="$nextTick(() =&gt; {setData()})" type="checkbox" id="checkbox" x-model="personalAccount" value="">
                             <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-teal-300 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-teal-600"></div>
                           </label>
                         </div>
                         <div>
                           <div>
-                            <template x-if="personalAccount"><span class="text-green-700">2 610 ₽</span></template>
-                            <template x-if="!personalAccount"><span>5 410 ₽</span></template>
+                            <template x-if="personalAccount"><span class="text-green-700" x-text="reFormat(confirmOrder.orderData.use_balance)"></span><span class="ml-1 text-green-700">₽</span></template>
+                            <template x-if="!personalAccount"><span x-text="reFormat(confirmOrder.customerData.balance)"></span><span class="ml-1 text-green-700">₽</span></template>
                           </div>
                         </div>
                       </div>
@@ -461,10 +461,7 @@
                   </div>
                   <div class="flex border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%)] text-xl text-black font-bold">
                     <div class="py-[12px] w-1/2 text-left"><span>Итого к оплате:</span></div>
-                    <div class="py-[12px] w-1/2 text-right">
-                      <template x-if="personalAccount"><span>0 ₽</span></template>
-                      <template x-if="!personalAccount"><span>2 610 ₽</span></template>
-                    </div>
+                    <div class="py-[12px] w-1/2 text-right"><span x-text="reFormat(confirmOrder.orderData.total_pay)"></span><span class="ml-1">₽</span></div>
                   </div>
                 </div>
                 <div class="separator border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%) my-4"></div>
@@ -492,11 +489,11 @@
               <div class="h-8" @click="modalCity = false;">
                 <div class="absolute right-3 top-1"><i class="fa fa-times text-2xl text-neutral-400" aria-hidden="true"></i></div>
               </div>
-              <div class="flex flex-col  items-center w-full h-full gap-4">
-                <h1 class="text-xl font-bold">Населенный пункт</h1>
-                <div class="flex flex-col gap-10 w-[88%]">
+              <h1 class="text-xl font-bold text-center">Населенный пункт</h1>
+              <div class="flex flex-col justify-between  items-center w-full h-full gap-4">
+                <div class="flex flex-col gap-10 w-[88%] pt-10">
                   <div class="item" x-init="areaStart">
-                    <input x-show="!$store.newFid" id="area" type="text" tabindex="0" :fid="$store.newFid">
+                    <input x-show="!$store.newFid" id="area" type="text" tabindex="0" autocomplete="off" :fid="$store.newFid">
                     <div class="relative w-full" x-show="$store.newFid">
                       <div class="areaSelection font-bold"></div>
                       <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearArea">
@@ -507,7 +504,7 @@
                     </div>
                   </div>
                   <div x-init="townStart">
-                    <input x-show="!$store.newFitown&amp;&amp;$store.newFid" id="town" type="text" tabindex="2">
+                    <input x-show="!$store.newFitown&amp;&amp;$store.newFid" id="town" type="text" tabindex="1" autocomplete="off">
                     <div class="relative w-full" x-show="$store.newFitown">
                       <div class="townSelection font-bold"></div>
                       <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearTown">
@@ -518,9 +515,23 @@
                     </div>
                   </div>
                 </div>
-                <div class="save pb-10 w-[60%]" x-show="$store.newFitown">
-                  <button class="bg-primary-700 w-full rounded-lg" @click="">
+                <div class="w-4/5 pb-16" x-show="$store.newFitown&amp;&amp;!saveAreaTownLoading&amp;&amp;!saveAreaTownSaved">
+                  <button class="bg-primary-700 w-full rounded-lg" @click="saveAreaTown">
                     <div class="p-3 text-white">Сохранить</div>
+                  </button>
+                </div>
+                <div class="w-4/5 pb-16" x-show="saveAreaTownLoading">
+                  <button class="flex items-center justify-center bg-primary-700 w-full rounded-lg ">
+                    <svg class="inline w-4 h-4 me-3 text-white animate-spin" aria-hidden="true" role="status" viewbox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#E5E7EB"></path>
+                      <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="p-3 text-white">Сохранение...</div>
+                  </button>
+                </div>
+                <div class="w-4/5 pb-16" x-show="saveAreaTownSaved">
+                  <button class="flex items-center justify-center bg-green-700 w-full rounded-lg ">
+                    <div class="p-3 text-white">Сохранено</div>
                   </button>
                 </div>
                 <div class="flex flex-col justify-center items-center w-full gap-4 h-full hidden">
@@ -968,6 +979,8 @@
             deliverySave: false,//Сохранить способ доставки
             paymentSave: false,//Сохранить способ оплаты
             personalDataSave:false,// Сохранить персональные данные
+            saveAreaTownLoading:false,// Кнопка сохранить в населенном пункте - сохранение на серваке
+            saveAreaTownSaved:false,//Кнопка сохранить в населенном пункте - сохранение на серваке завершено
             // step: 1,// Шаг
             regions: [
               {value: 262, name: 'г. Екатеринбург - Агинский бурятский округ'},
@@ -1105,6 +1118,31 @@
                   return "Нет таких значений";
               }
             },
+            confirmOrder: {
+              cart: {count: 0, amount: 0, weight: 0, weight_pack: 0, saved: 0},
+              orderData: {total: 0, total_pay: 0, full_address:"Выберите населенный пункт"},
+              customerData: {balance: 0}
+            },
+            getInformation() {
+              fetch('https://seconom24.ru/preorder/?action=getDataOrder&type=booked')
+                .then(response => response.json())
+                .then(response => this.confirmOrder = response)
+                .then(response => console.log(this.confirmOrder))
+            },
+            reFormat(num) {
+              return ('' + num).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+            },
+            setData() {
+              let sendForm = new FormData()
+              sendForm.set('value', this.personalAccount)
+              fetch('https://seconom24.ru/preorder/?action=setBalance&type=booked', {
+                method: 'POST',
+                body: sendForm
+              })
+                .then(response => console.log(response))
+                .then(response => console.log('personalAccount ', this.personalAccount))
+              this.getInformation()
+            },
             get statusMethodPoint() {
               if (this.deliveryMethod.pointCompany.sekonom || this.deliveryMethod.pointCompany.cdek || this.deliveryMethod.pointCompany.boxberry || this.deliveryMethod.pointCompany.pochta || this.deliveryMethod.pointCompany.yandex) {
                 return true
@@ -1132,7 +1170,6 @@
             },
         
         
-            areaFid:false,
             areaStart() {
               console.log('areaStart')
               areaElement = new autoComplete({
@@ -1225,7 +1262,7 @@
                 // window.Alpine.store('fid', this.fiatId)
                 Alpine.store('newFid',this.fiatId)
         
-                this.areaFid = this.fiatId
+        
         
         
                 // Render selected choice to selection div
@@ -1325,9 +1362,11 @@
                 townElement.input.blur();
                 // Prepare User's Selected Value
                 const selection = feedback.selection.value.value;
+                const data = feedback.selection.value.data;
                 // console.log(selection)
                 Alpine.store('newFitown', true)
-                // this.$store.newFitown = true
+                Alpine.store('allTownData', data)
+                console.log("allTownData",Alpine.store('allTownData'))
         
                 // Render selected choice to selection div
                 document.querySelector(".townSelection").innerHTML = selection;
@@ -1358,6 +1397,20 @@
                 document.getElementById("town").focus()
               }, 0)
             },
+            async saveAreaTown() {
+              this.saveAreaTownLoading = true
+              let response = await fetch('https://seconom24.ru/preorder/?action=saveCity', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: Alpine.store('allTownData')
+              });
+              this.saveAreaTownLoading = false
+              this.saveAreaTownSaved = true
+              this.getInformation()
+              setTimeout(() => (this.saveAreaTownSaved=false,this.modalCity = false), 5000);
+            }
         
           }
         }

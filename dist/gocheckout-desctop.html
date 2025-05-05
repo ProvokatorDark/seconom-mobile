@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <script defer src="gocheckout-desctop.js"></script><link href="src_scss_gocheckout-desctop_scss.css" rel="stylesheet"></head>
+  <script defer src="gocheckout-desctop.js"></script><link href="gocheckout-desctop.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base" x-data="{isLeftMenu:false}">
     <header class="ns:px-1 sm:px-1 md:px-2 xl:px-3 2xl:px-3 2xl:container 2xl:mx-auto border-b-[1px] border-neutral-100">
       <div>
@@ -13532,10 +13532,10 @@
                         <div>
                           <div>
                             <template x-if="personalAccount">
-                              <div><span class="text-green-700" x-html="reFormat(confirmOrder.orderData.use_balance)"></span><span class="ml-1 text-green-700">₽</span></div>
+                              <div><span class="text-green-700" x-text="reFormat(confirmOrder.orderData.use_balance)"></span><span class="ml-1 text-green-700">₽</span></div>
                             </template>
                             <template x-if="!personalAccount">
-                              <div><span x-html="reFormat(confirmOrder.customerData.balance)"></span><span class="ml-1">₽</span></div>
+                              <div><span x-text="reFormat(confirmOrder.customerData.balance)"></span><span class="ml-1">₽</span></div>
                             </template>
                           </div>
                         </div>
@@ -13544,7 +13544,7 @@
                   </div>
                   <div class="flex border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%)] text-xl text-black font-bold">
                     <div class="py-[12px] w-1/2 text-left"><span>Итого к оплате:</span></div>
-                    <div class="py-[12px] w-1/2 text-right"><span x-html="reFormat(confirmOrder.orderData.total_pay)"></span><span class="ml-1">₽</span></div>
+                    <div class="py-[12px] w-1/2 text-right"><span x-text="reFormat(confirmOrder.orderData.total_pay)"></span><span class="ml-1">₽</span></div>
                   </div>
                 </div>
                 <div class="separator border-solid border-t-[0.5px] border-[rgb(204 214 228 / 60%) my-4"></div>
@@ -13929,7 +13929,7 @@
         <div class="left w-[470px] h-full flex flex-col justify-between" x-data="mestoComponent" x-init="$watch('$store.fid', (value,oldValue) =&gt; console.log('value',value,'oldValue',oldValue))">
           <div>
             <div class="ml-5 mt-6 h-10 flex items-center" x-init="areaStart">
-              <input x-show="!$store.fid" id="area" type="text" tabindex="0" :fid="$store.fid">
+              <input x-show="!$store.fid" id="area" type="text" tabindex="0" autocomplete="off" :fid="$store.fid">
               <div class="relative w-full" x-show="$store.fid">
                 <div class="areaSelection font-bold"></div>
                 <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearArea">
@@ -13940,7 +13940,7 @@
               </div>
             </div>
             <div class="ml-5 mt-6 h-10 flex items-center" x-init="townStart">
-              <input x-show="!$store.fitown&amp;&amp;$store.fid" id="town" type="text" tabindex="2">
+              <input x-show="!$store.fitown&amp;&amp;$store.fid" id="town" type="text" tabindex="1" autocomplete="off">
               <div class="relative w-full" x-show="$store.fitown">
                 <div class="townSelection font-bold"></div>
                 <div class="absolute top-0 -right-5 w-5 h-5 text-black pointer-events-auto cursor-pointer" @click="clearTown">
@@ -14136,7 +14136,6 @@
             }
           },
           async saveAreaTown() {
-            
             let response = await fetch('https://seconom24.ru/preorder/?action=saveCity', {
               method: 'POST',
               headers: {
