@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <script defer src="gocheckout.js"></script><link href="src_scss_gocheckout_scss.css" rel="stylesheet"></head>
+  <script defer src="gocheckout.js"></script><link href="gocheckout.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base" x-data="{isLeftMenu:false}">
     <div class="flex flex-col min-h-screen">
       <!--include ../molecules/menu-clean-->
@@ -344,7 +344,7 @@
         <div class="flex flex-col text-gray-700 text-sm border-solid border-y-[0.5px] border-[rgb(204 214 228 / 60%)">
           <div class="h-[50px]">
             <div class="h-[50px]">
-              <div class="h-[50px] flex justify-between items-center "><i class="text-lg fa-solid fa-city " :class="oblastSave ? 'text-green-600':'text-red-600'"></i>
+              <div class="h-[50px] flex justify-between items-center"><i class="text-lg fa-solid fa-city" :class="oblastSave ? 'text-green-600':'text-red-600'"></i>
                 <div class="flex justify-between items-center w-full ml-3"><span x-text="confirmOrder.customerData.full_address"></span>
                   <div class="h-6 w-6" @click="modalCity = true;">
                     <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -967,6 +967,9 @@
             modalButtonPvz:true,
             modalButtonCourier:false,
         
+            rubrikaZakaz: true,// Рубрика Заказ
+            rubrikaBronirovonie:false, // Рубрика Бронирование
+        
             personalAccount:false,
             paymentSave: false,
             validation:false,
@@ -1126,8 +1129,14 @@
             getInformation() {
               fetch('https://seconom24.ru/preorder/?action=getDataOrder&type=booked')
                 .then(response => response.json())
-                .then(response => this.confirmOrder = response)
-                .then(response => console.log(this.confirmOrder))
+                .then(function (response) {
+                  if (response.not_autorized === true) {
+                    console.log('Не авторизован')
+                  } else {
+                    this.confirmOrder = response
+                    console.log('авторизован', this.confirmOrder)
+                  }
+                })
             },
             reFormat(num) {
               return ('' + num).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')

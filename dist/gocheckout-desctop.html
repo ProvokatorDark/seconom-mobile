@@ -5,7 +5,7 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <script defer src="gocheckout-desctop.js"></script><link href="gocheckout-desctop.css" rel="stylesheet"></head>
+  <script defer src="gocheckout-desctop.js"></script><link href="src_scss_gocheckout-desctop_scss.css" rel="stylesheet"></head>
   <body class="bg-white text-neutral-600 work-sans leading-normal text-base" x-data="{isLeftMenu:false}">
     <header class="ns:px-1 sm:px-1 md:px-2 xl:px-3 2xl:px-3 2xl:container 2xl:mx-auto border-b-[1px] border-neutral-100">
       <div>
@@ -13496,7 +13496,7 @@
                   <div class="text-xl text-black font-bold mb-3">Ваш заказ</div>
                   <div class="flex text-neutral-700 mb-3 ">
                     <div class="w-1/2 text-left"><span>Количество товаров:</span></div>
-                    <div class="w-1/2 text-right"><span x-text="confirmOrder.cart.count"></span></div>
+                    <div class="w-1/2 text-right"><span x-html="confirmOrder.cart.count"></span></div>
                   </div>
                   <div class="flex text-neutral-700 mb-3">
                     <div class="w-1/2 text-left"><span>Сумма заказа:</span></div>
@@ -13952,8 +13952,19 @@
             </div>
           </div>
         </div>
-        <div class="w-full pb-12 flex items-center justify-center" x-show="$store.fitown">
+        <div class="w-full pb-12 flex items-center justify-center" x-show="$store.fitown&amp;&amp;!saveAreaTownLoading&amp;&amp;!saveAreaTownSaved">
           <button class="w-[368px] h-[56px] bg-primary-700 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-lg" @click="saveAreaTown" type="submit"><span>Сохранить</span></button>
+        </div>
+        <div class="w-full pb-12 flex items-center justify-center" x-show="saveAreaTownLoading">
+          <button class="w-[368px] h-[56px] bg-primary-700 text-white font-bold py-2 px-4 rounded-lg">
+            <svg class="inline w-4 h-4 me-3 text-white animate-spin" aria-hidden="true" role="status" viewbox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#E5E7EB"></path>
+              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentColor"></path>
+            </svg><span>Сохранение...</span>
+          </button>
+        </div>
+        <div class="w-full pb-12 flex items-center justify-center" x-show="saveAreaTownSaved">
+          <button class="w-[368px] h-[56px] text-white font-bold py-2 px-4 rounded-lg bg-green-700 "><span>Сохранено</span></button>
         </div>
       </div>
     </main>
@@ -13978,6 +13989,13 @@
           townInfo: false,//Текст город
           step: 1,// Шаг
           validation: false,// Форма заполнена все провалидированно. вадидацию еще не прикрутил
+          saveAreaTownLoading: false,// Кнопка сохранить в населенном пункте - сохранение на серваке
+          saveAreaTownSaved: false,//Кнопка сохранить в населенном пункте - сохранение на серваке завершено
+          confirmOrder: {
+            cart: {count: 0, amount: 0, weight: 0, weight_pack: 0, saved: 0},
+            orderData: {total: 0, total_pay: 0},
+            customerData: {balance: 0}
+          },
       
           deliveryMethod: {
             sposob: '',
@@ -14095,16 +14113,18 @@
           isObject(value) {
             return value !== null && typeof value === 'object';
           },
-          confirmOrder: {
-            cart: {count: 0, amount: 0, weight: 0, weight_pack: 0, saved: 0},
-            orderData: {total: 0, total_pay: 0},
-            customerData: {balance: 0}
-          },
+      
           getInformation() {
             fetch('https://seconom24.ru/preorder/?action=getDataOrder&type=booked')
               .then(response => response.json())
-              .then(response => this.confirmOrder = response)
-              .then(response => console.log(this.confirmOrder))
+              .then(function (response) {
+                if (response.not_autorized ===true){
+                  console.log('Не авторизован')
+                } else {
+                  this.confirmOrder = response
+                  console.log('авторизован',this.confirmOrder)
+                }
+              })
           },
           reFormat(num) {
             return ('' + num).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
@@ -14136,6 +14156,7 @@
             }
           },
           async saveAreaTown() {
+            this.saveAreaTownLoading = true
             let response = await fetch('https://seconom24.ru/preorder/?action=saveCity', {
               method: 'POST',
               headers: {
@@ -14143,6 +14164,10 @@
               },
               body: Alpine.store('allTownData')
             });
+            this.saveAreaTownLoading = false
+            this.saveAreaTownSaved = true
+            this.getInformation()
+            setTimeout(() => (this.saveAreaTownSaved = false, this.oblastModal = false,this.localOverlay=false), 500);
           }
       
       
@@ -14153,7 +14178,7 @@
           fiatId: '',
           fullInfo:{},
           areaStart() {
-            console.log('areaStart')
+            // console.log('areaStart')
             areaElement = new autoComplete({
               selector: "#area",
               data: {
@@ -14265,7 +14290,7 @@
                     // console.log('fiatId', this.fiatId)
       
                     const query2 = Alpine.store('fid')
-                    console.log('query2', query2)
+                    // console.log('query2', query2)
       
                     const source = await fetch(
                       "https://seconom24.ru/preorder/?action=setCity&query=" + query + "&id=" + query2
@@ -14341,13 +14366,13 @@
               const selection = feedback.selection.value.value;
               const data = feedback.selection.value.data;
       
-              console.log("selection",selection)
-              console.log("data",data)
+              // console.log("selection",selection)
+              // console.log("data",data)
       
               window.Alpine.store('fitown', true)
               window.Alpine.store('allTownData', data)
       
-              console.log("allTownData",Alpine.store('allTownData'))
+              // console.log("allTownData",Alpine.store('allTownData'))
               // Render selected choice to selection div
               document.querySelector(".townSelection").innerHTML = selection;
               // Replace Input value with the selected value
@@ -14365,23 +14390,9 @@
             areaElement.close()
             areaElement.unInit();
             areaElement.init()
-            document.getElementById("area").focus()
-            // Create a KeyboardEvent object for the "a" key
-            const event = new KeyboardEvent("keypress", {
-              key: "Tab",
-              code: "Tab",
-              // charCode: 97, // ASCII code for 'a'
-              keyCode: 9   // Deprecated but included for compatibility
-            });
-      
-            // Dispatch the event to the window
-            window.dispatchEvent(event);
-      
-            window.addEventListener('keypress', (e) => {
-              if (e.key === 'Tab') {
-                console.log(e);
-              }
-            });
+            const timerArea = setTimeout(() => {
+              document.getElementById("area").focus()
+            }, 0)
       
           },
           clearTown() {
@@ -14390,6 +14401,9 @@
             townElement.close()
             townElement.unInit();
             townElement.init()
+            const timerTown = setTimeout(() => {
+              document.getElementById("town").focus()
+            }, 0)
           },
         }))
       })
