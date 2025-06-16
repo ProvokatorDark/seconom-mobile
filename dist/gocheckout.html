@@ -365,7 +365,7 @@
                     <p>Выберите способ доставки</p>
                   </div>
                   <div x-cloak x-show="deliverySave"><span x-text="deliveryMethod.sposob"></span><span class="ml-1" x-text="deliveryMethod.company"></span><span class="ml-1" x-text="deliveryMethod.address"></span></div>
-                  <div class="h-6 w-6" @click="modalDelivery = true">
+                  <div class="h-6 w-6" @click="modalDelivery = true,getDataSB()">
                     <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                       <path stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                     </svg>
@@ -622,7 +622,7 @@
                     </div>
                   </div>
                   <div class="w-full">
-                    <div class="grid grid-cols-2 gap-1" x-cloak x-show="deliveryMethod.isMethodPoint">
+                    <div class="grid grid-cols-1 gap-1" x-cloak x-show="deliveryMethod.isMethodPoint">
                       <div>
                         <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-seconom" @click="modalMainClick('pointCompany','sekonom')">
                           <div class="w-[92px] h-[20px] bg-cover bg-[url('../assets/svg/gocheckout/logo-seconom-2.svg')]"></div><span class="text-xs text-gray-600">Бесплатно +0 ₽</span>
@@ -680,8 +680,11 @@
                         </label>
                       </div>
                       <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-yandex" @click="modalMainClick('pointCompany','yandex')">
-                          <div class="w-[118px] h-[14px] bg-cover bg-[url('../assets/svg/gocheckout/yandexDelivery.svg')]"></div><span class="text-xs text-gray-600">Пункт выдачи +235 ₽</span>
+                        <label class="h-[78px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-yandex" @click="modalMainClick('pointCompany','yandex')">
+                          <div class="flex justify-between">
+                            <div class="w-[118px] h-[14px] bg-cover bg-[url('../assets/svg/gocheckout/yandexDelivery.svg')]"></div>
+                            <div><span class="text-normal mr-6 mb-3 text-red-600">ПВЗ +2350 Р</span></div>
+                          </div><span class="text-sm text-gray-600">Доставка заказа по 100% предоплате на сумму более 5000 рублей осуществляется БЕСПЛАТНО! Вес до  3-х кг.</span>
                           <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="point-yandex" type="radio" name="delivery-method" value="yandex" :checked="deliveryMethod.pointCompany.yandex">
                           <template x-if="deliveryMethod.pointCompany.yandex"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
                                 <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
@@ -1138,6 +1141,11 @@
               } else {
                 this.confirmOrder = data
               }
+            },
+            async getDataSB(){
+              let response = await fetch('https://seconom24.ru/preorder/?action=getDataSB')
+              let data = await response.json()
+              console.log(data)
             },
             reFormat(num) {
               return ('' + num).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
