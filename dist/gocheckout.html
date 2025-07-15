@@ -623,123 +623,56 @@
                   </div>
                   <div class="w-full">
                     <div class="grid grid-cols-1 gap-1" x-cloak x-show="deliveryMethod.isMethodPoint">
-                      <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-seconom" @click="modalMainClick('pointCompany','sekonom')">
-                          <div class="w-[92px] h-[20px] bg-cover bg-[url('../assets/svg/gocheckout/logo-seconom-2.svg')]"></div><span class="text-xs text-gray-600">Бесплатно +0 ₽</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="point-seconom" type="radio" name="delivery-method" value="seconom" :checked="true">
-                          <template x-if="deliveryMethod.pointCompany.sekonom"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.pointCompany.sekonom"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
-                      <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-cdek" @click="modalMainClick('pointCompany','cdek')">
-                          <div class="w-[52px] h-[14px] bg-cover bg-[url('../assets/svg/gocheckout/CDEK_logo.svg')]"></div><span class="text-xs text-gray-600">ПВЗ +350 ₽</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="point-cdek" type="radio" name="delivery-method" value="cdek" :checked="deliveryMethod.pointCompany.cdek">
-                          <template x-if="deliveryMethod.pointCompany.cdek"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.pointCompany.cdek"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
-                      <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-boxberry" @click="modalMainClick('pointCompany','boxberry')">
-                          <div class="w-[92px] h-[20px] bg-cover bg-[url('../assets/svg/gocheckout/logo-boxberry.png')]"></div><span class="text-xs text-gray-600">ПВЗ +255 ₽</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="point-boxberry" type="radio" name="delivery-method" value="boxberry" :checked="deliveryMethod.pointCompany.boxberry">
-                          <template x-if="deliveryMethod.pointCompany.boxberry"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.pointCompany.boxberry"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
-                      <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-pochta" @click="modalMainClick('pointCompany','pochta')">
-                          <div class="w-[104px] h-[14px] bg-cover bg-[url('../assets/svg/gocheckout/logo-pochta.svg')]"></div><span class="text-xs text-gray-600">Пункт выдачи +155 ₽</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="point-pochta" type="radio" name="delivery-method" value="pochta" :checked="deliveryMethod.pointCompany.pochta">
-                          <template x-if="deliveryMethod.pointCompany.pochta"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.pointCompany.pochta"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
-                      <div>
-                        <label class="h-[78px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="point-yandex" @click="modalMainClick('pointCompany','yandex')">
-                          <div class="flex justify-between">
-                            <div class="w-[118px] h-[14px] bg-cover bg-[url('../assets/svg/gocheckout/yandexDelivery.svg')]"></div>
-                            <div><span class="text-normal mr-6 mb-3 text-red-600">ПВЗ +2350 Р</span></div>
-                          </div><span class="text-sm text-gray-600">Доставка заказа по 100% предоплате на сумму более 5000 рублей осуществляется БЕСПЛАТНО! Вес до  3-х кг.</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="point-yandex" type="radio" name="delivery-method" value="yandex" :checked="deliveryMethod.pointCompany.yandex">
-                          <template x-if="deliveryMethod.pointCompany.yandex"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.pointCompany.yandex"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
+                      <template x-for="item in shippingBilling.shipping.pvz">
+                        <div>
+                          <label class="h-max flex flex-col justify-between relative bg-white rounded-lg p-2" :for="item[1].id" @click="modalMainClick('pvzCompany',item[1].id)">
+                            <div class="flex justify-between">
+                              <div :class="'shipping-'+item[1].id"></div>
+                              <div class="text-sm leading-4 tracking-tight mr-5 flex flex-col ">
+                                <p class="text-blue-600 font-bold" x-text="item[1].name"></p>
+                                <div class="text-red-600 font-bold" x-text="item[1].name2+' '+item[1].price+' ₽'"></div>
+                              </div>
+                            </div>
+                            <div><span class="text-sm leading-3 tracking-tight text-gray-600" x-text="item[1].description"></span>
+                              <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" :id="item[1].id" type="radio" name="delivery-method" :value="deliveryMethod.pvzCompany[item[1].id]" :checked="deliveryMethod.pvzCompany[item[1].id]">
+                            </div>
+                            <template x-if="deliveryMethod.pvzCompany[item[1].id]"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
+                                  <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                  </svg></span></span></template>
+                            <template x-if="!deliveryMethod.pvzCompany[item[1].id]"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
+                                  <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                  </svg></span></span></template>
+                          </label>
+                        </div><span x-text="item[1].name"></span>
+                      </template>
                     </div>
-                    <div class="grid grid-cols-2 gap-1" x-cloak x-show="deliveryMethod.isMethodCourier">
-                      <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="courier-cdek" @click="modalMainClick('courierCompany','cdek')">
-                          <div class="w-[52px] h-[14px] bg-cover bg-[url('../assets/svg/gocheckout/CDEK_logo.svg')]"></div><span class="text-xs text-gray-600">До двери +455 ₽</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="courier-cdek" type="radio" name="delivery-method" value="cdek" :checked="deliveryMethod.courierCompany.cdek">
-                          <template x-if="deliveryMethod.courierCompany.cdek"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.courierCompany.cdek"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
-                      <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="courier-boxberry" @click="modalMainClick('courierCompany','boxberry')">
-                          <div class="w-[92px] h-[20px] bg-cover bg-[url('../assets/svg/gocheckout/logo-boxberry.png')]"></div><span class="text-xs text-gray-600">До двери +355 ₽</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="courier-boxberry" type="radio" name="delivery-method" value="boxberry" :checked="deliveryMethod.courierCompany.boxberry">
-                          <template x-if="deliveryMethod.courierCompany.boxberry"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.courierCompany.boxberry"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
-                      <div>
-                        <label class="h-[56px] flex flex-col justify-between relative bg-white rounded-lg p-2" for="courier-pochta" @click="modalMainClick('courierCompany','pochta')">
-                          <div class="w-[104px] h-[14px] bg-cover bg-[url('../assets/svg/gocheckout/logo-pochta.svg')]"></div><span class="text-xs text-gray-600">До двери +555 ₽</span>
-                          <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" id="courier-pochta" type="radio" name="delivery-method" value="pochta" :checked="deliveryMethod.courierCompany.pochta">
-                          <template x-if="deliveryMethod.courierCompany.pochta"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
-                                <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                          <template x-if="!deliveryMethod.courierCompany.pochta"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
-                                <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg></span></span></template>
-                        </label>
-                      </div>
+                    <div class="grid grid-cols-1 gap-1" x-cloak x-show="deliveryMethod.isMethodCourier">
+                      <template x-for="item in shippingBilling.shipping.address">
+                        <div>
+                          <label class="h-max flex flex-col justify-between relative bg-white rounded-lg p-2" :for="item[1].id" @click="modalMainClick('courierCompany',item[1].id)">
+                            <div class="flex justify-between">
+                              <div :class="'shipping-'+item[1].id"></div>
+                              <div class="text-sm leading-4 tracking-tight mr-5 flex flex-col ">
+                                <p class="text-blue-600 font-bold" x-text="item[1].name"></p>
+                                <div class="text-red-600 font-bold" x-text="item[1].name2+' '+item[1].price+' ₽'"></div>
+                              </div>
+                            </div>
+                            <div><span class="text-sm leading-3 tracking-tight text-gray-600" x-text="item[1].description"></span>
+                              <input class="absolute h-0 w-0 appearance-none focus:ring-transparent" :id="item[1].id" type="radio" name="delivery-method" :value="deliveryMethod.courierCompany[item[1].id]" :checked="deliveryMethod.courierCompany[item[1].id]">
+                            </div>
+                            <template x-if="deliveryMethod.courierCompany[item[1].id]"><span class="absolute inset-0 border-2 border-green-500 bg-green-200 bg-opacity-10 rounded-lg" aria-hidden="true"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-green-200">
+                                  <svg class="h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                  </svg></span></span></template>
+                            <template x-if="!deliveryMethod.courierCompany[item[1].id]"><span class="not-check absolute inset-0 border-2 bg-gray-200 bg-opacity-10 rounded-lg"><span class="absolute top-1 right-1 h-4 w-4 inline-flex items-center justify-center rounded-full bg-gray-200">
+                                  <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                  </svg></span></span></template>
+                          </label>
+                        </div><span x-text="item[1].name"></span>
+                      </template>
                     </div>
                   </div>
                 </div>
@@ -971,7 +904,7 @@
             modalPayment:false,//Подформа оплаты
             modalPerson:false,//Подформа личных данных
             // overlay: false,//Оверлей
-            modalButtonPvz:true,
+            modalButtonPvz:false,
             modalButtonCourier:false,
         
             rubrikaZakaz: true,// Рубрика Заказ
@@ -991,6 +924,19 @@
             personalDataSave:false,// Сохранить персональные данные
             saveAreaTownLoading:false,// Кнопка сохранить в населенном пункте - сохранение на серваке
             saveAreaTownSaved:false,//Кнопка сохранить в населенном пункте - сохранение на серваке завершено
+        
+            shippingBilling: {
+              shipping: {
+                error: {},
+                success: {},
+                obj:{},
+                arr:[],
+                pvz:[],
+                address: [],
+              },
+              billing: {}
+            },
+        
             // step: 1,// Шаг
             regions: [
               {value: 262, name: 'г. Екатеринбург - Агинский бурятский округ'},
@@ -1004,6 +950,7 @@
               person:'Заполните персональные данные',
               isMethodPoint: true,//Метод доставки ПВЗ
               isMethodCourier: false,//Метод доставки Курьер
+        
               pointCompany: {
                 sekonom: false,
                 cdek: true,
@@ -1011,10 +958,20 @@
                 pochta: false,
                 yandex: false,
               },
+              pvzCompany:{
+                '18_online':false,
+                '18_cash':false,
+                '17_online':false,
+                '21_online':false,
+                '22_online':false
+              },
+        
               courierCompany: {
                 cdek: false,
                 boxberry: false,
                 pochta: false,
+                '17_online':false,
+                '22_online':false
               },
               paymentMethod: {
                 online: true,
@@ -1043,13 +1000,14 @@
         
               }
             },
+        
             //Клик по Курьер
             onCourierDelivery() {
               this.deliveryMethod.sposob=''
               this.deliveryMethod.company=''
               this.deliveryMethod.sposob='Курьер'
               this.clearCompany('pointCompany')
-        
+              this.clearCompany('pvzCompany')
               this.modalButtonPvz = false
               this.modalButtonCourier = false
         
@@ -1062,6 +1020,7 @@
               this.deliveryMethod.company = ''
               this.deliveryMethod.sposob='Пункт выдачи'
               this.clearCompany('courierCompany')
+              this.clearCompany('pvzCompany')
               this.modalButtonPvz = false
               this.modalButtonCourier = false
               this.deliveryMethod.isMethodPoint = true
@@ -1071,7 +1030,11 @@
               this.clearCompany(point)
               this.deliveryMethod[point][arg] = true
               this.deliveryMethod.company = this.companySwitcher(arg)
-              if(point==="pointCompany"){
+              if (point === "pointCompany") {
+                this.modalButtonPvz = true
+                this.modalButtonCourier = false
+              }
+              if (point === "pvzCompany") {
                 this.modalButtonPvz = true
                 this.modalButtonCourier = false
               }
@@ -1079,6 +1042,7 @@
                 this.modalButtonPvz = false
                 this.modalButtonCourier = true
               }
+        
             },
             modalMainClose() {
               this.localOverlay = false
@@ -1105,6 +1069,7 @@
                   return "Нет таких значений";
               }
             },
+        
             paymentClick(arg) {
               this.clearPayment()
               this.deliveryMethod.paymentMethod[arg] = true
@@ -1145,8 +1110,19 @@
             async getDataSB(){
               let response = await fetch('https://seconom24.ru/preorder/?action=getDataSB')
               let data = await response.json()
-              console.log(data)
+              this.shippingBilling.shipping.obj = data
+              this.shippingBilling.shipping.pvz=Object.entries(data.sb.pvz)
+              this.shippingBilling.shipping.address=Object.entries(data.sb.address)
+              this.processingDataSB(this.shippingBilling)
             },
+        
+            processingDataSB(data){
+              console.log(data)
+              console.log('shippingBilling ',this.shippingBilling.shipping.obj)
+              console.log('shippingBilling pvz', this.shippingBilling.shipping.pvz)
+              console.log('target',this.shippingBilling)
+            },
+        
             reFormat(num) {
               return ('' + num).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
             },
